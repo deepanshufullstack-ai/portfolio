@@ -29,6 +29,7 @@ export default function Navbar() {
         minWidth: "100vw",
         height: scrolled ? "80px" : "96px",
         borderBottom: scrolled ? "1px solid #a8b2d111" : "1px solid #0b1b31",
+        backdropFilter: scrolled ? 'blur(8px)' : 'none',
       }}
     >
       <div

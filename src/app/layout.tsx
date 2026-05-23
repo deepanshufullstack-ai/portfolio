@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/utils/SmoothScroll";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -30,7 +31,7 @@ export default function RootLayout({
       className={`${bricolageGrotesque.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" cz-shortcut-listen="true">
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
