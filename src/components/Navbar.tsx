@@ -3,7 +3,14 @@
 import { Hexagon } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const navLinks = ["About", "Experience", "Work", "Contact"];
+// const navLinks = ["About", "Experience", "Work", "Contact"];
+
+const navLinks = [
+  { menu: "About", href: "#about" },
+  { menu: "Experience", href: "#experience" },
+  { menu: "Work", href: "#work" },
+  { menu: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +36,7 @@ export default function Navbar() {
         minWidth: "100vw",
         height: scrolled ? "80px" : "96px",
         borderBottom: scrolled ? "1px solid #a8b2d111" : "1px solid #0b1b31",
-        backdropFilter: scrolled ? 'blur(8px)' : 'none',
+        backdropFilter: scrolled ? "blur(12px)" : "none",
       }}
     >
       <div
@@ -55,11 +62,11 @@ export default function Navbar() {
           </h1>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
-          {navLinks.map((link, index) => (
-            <button key={link} style={{ fontSize: "14px", cursor: "pointer" }}>
+          {navLinks.map((item, index) => (
+            <a key={item.menu} href={item.href} style={{ fontSize: "14px" }}>
               <span style={{ color: "#64ffda" }}>0{index + 1}. </span>
-              {link}
-            </button>
+              {item.menu}
+            </a>
           ))}
           <button
             style={{
