@@ -1,6 +1,26 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function Work() {
+      const ref = useRef<HTMLDivElement>(null);
+    
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              ref.current?.querySelectorAll(".reveal").forEach((el, i) => {
+                setTimeout(() => el.classList.add("visible"), i * 100);
+              });
+            }
+          },
+          { threshold: 0.1 },
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+      }, []);
   return (
-    <div>
+    <div id="work" ref={ref}>
       <h1>Work</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex praesentium
