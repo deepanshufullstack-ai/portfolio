@@ -2,7 +2,7 @@
 
 import { Hexagon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { MenuItem } from "./styled";
+import { MenuItem, ResumeBtn } from "./styled";
 
 const navLinks = [
   { menu: "About", href: "#about" },
@@ -115,19 +115,7 @@ export default function Navbar() {
             </MenuItem>
           ))}
 
-          <button
-            style={{
-              color: "#64ffda",
-              fontSize: "14px",
-              padding: "10px 20px",
-              border: "1px solid #64ffda",
-              borderRadius: "4px",
-              cursor: "pointer",
-              background: "transparent",
-            }}
-          >
-            Resume
-          </button>
+          <ResumeBtn>Resume</ResumeBtn>
         </div>
       </div>
     </nav>

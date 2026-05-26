@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { CheckoutMyWorkBtn, ContactMeBtn } from "./styled";
 
 export default function Hero() {
   return (
@@ -75,33 +76,10 @@ export default function Hero() {
             gap: "20px",
           }}
         >
-          <button
-            style={{
-              backgroundColor: "#64ffda",
-              color: "#0a1929",
-              fontSize: "14px",
-              fontWeight: "500",
-              padding: "14px 28px",
-              border: "none",
-              borderRadius: "30px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
+          <CheckoutMyWorkBtn>
             Check out my work <ArrowRight color="#0a1929" size={16} />
-          </button>
-          <button
-            style={{
-              color: "#64ffda",
-              fontSize: "14px",
-              padding: "14px 28px",
-              border: "1px solid #64ffda",
-              borderRadius: "30px",
-            }}
-          >
-            Contact me
-          </button>
+          </CheckoutMyWorkBtn>
+          <ContactMeBtn>Contact me</ContactMeBtn>
         </div>
       </div>
     </section>
