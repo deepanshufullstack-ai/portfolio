@@ -2,6 +2,7 @@
 
 import { Mail, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { ConnectBtn } from "./styled";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -85,103 +86,25 @@ export default function Contact() {
             opportunity, or just want to connect — my inbox is always
             <br /> open. Ill try my best to get back to you!
           </p>
-          <a
-            href=""
-            style={{ display: "flex", alignItems: "center", gap: "10px" }}
-          >
-            <div
-              style={{
-                width: "50px",
-                height: "50px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#64ffdb2f",
-                borderRadius: "4px",
-              }}
-            >
-              <Mail color="#64ffda" size={20} />
+          
+          <ConnectBtn href="" style={{marginTop: '20px'}}>
+            <div className="icon-container">
+              <Mail color="#64ffda" size={20} className="icon" />
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 8,
-              }}
-            >
-              <span
-                style={{
-                  color: "#8892b0",
-                  textTransform: "uppercase",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  lineHeight: 1,
-                }}
-              >
-                email me
-              </span>
-              <h1
-                style={{
-                  color: "#ccd6f6",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  fontSize: "17px",
-                  fontWeight: "400",
-                  lineHeight: 1,
-                }}
-              >
-                hello@alexmercer.com
-              </h1>
+            <div className="link-container">
+              <span>email me</span>
+              <h1>hello@alexmercer.com</h1>
             </div>
-          </a>
-                    <a
-            href=""
-            style={{ display: "flex", alignItems: "center", gap: "10px" }}
-          >
-            <div
-              style={{
-                width: "50px",
-                height: "50px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#64ffdb2f",
-                borderRadius: "4px",
-              }}
-            >
+          </ConnectBtn>
+          <ConnectBtn href="">
+            <div className="icon-container">
               <MapPin color="#64ffda" size={20} />
-              
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 8,
-              }}
-            >
-              <span
-                style={{
-                  color: "#8892b0",
-                  textTransform: "uppercase",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  lineHeight: 1,
-                }}
-              >
-                location
-              </span>
-              <h1
-                style={{
-                  color: "#ccd6f6",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  fontSize: "17px",
-                  fontWeight: "400",
-                  lineHeight: 1,
-                }}
-              >
-                San Francisco, CA
-              </h1>
+            <div className="link-container">
+              <span>location</span>
+              <h1>San Francisco, CA</h1>
             </div>
-          </a>
+          </ConnectBtn>
         </div>
         <div style={{ width: "50%" }}></div>
       </div>
