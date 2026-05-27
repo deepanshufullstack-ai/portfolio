@@ -71,46 +71,6 @@ export const ContactMeBtn = styled.button`
 `;
 
 //contact
-// export const ConnectBtn = styled.a`
-//   display: flex;
-//   align-items: center;
-//   gap: 10px;
-
-//   .icon-container {
-//     width: 50px;
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: #64ffdb2f;
-//     border-radius: 4px;
-//     transition: background-color 0.3s ease;
-
-//     &:hover {
-//       background-color: #64ffdb54;
-//     }
-//   }
-
-//   .link-container {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 8px;
-
-//     h1 {
-//       color: #ccd6f6;
-//       font-family: var(--font-bricolage-grotesque);
-//       font-size: 17px;
-//       font-weight: 400;
-//       line-height: 1;
-//       transition: color 0.3s ease;
-
-//       &:hover {
-//         color: #64ffda;
-//       }
-//     }
-//   }
-// `;
-
 export const ConnectBtn = styled.a`
   display: flex;
   align-items: center;
