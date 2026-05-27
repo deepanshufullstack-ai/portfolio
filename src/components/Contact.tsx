@@ -86,8 +86,8 @@ export default function Contact() {
             opportunity, or just want to connect — my inbox is always
             <br /> open. Ill try my best to get back to you!
           </p>
-          
-          <ConnectBtn href="" style={{marginTop: '20px'}}>
+
+          <ConnectBtn href="" style={{ marginTop: "20px" }}>
             <div className="icon-container">
               <Mail color="#64ffda" size={20} className="icon" />
             </div>
