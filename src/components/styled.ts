@@ -3,7 +3,7 @@ import styled from "styled-components";
 // navbar
 export const MenuItem = styled.a`
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 500;
   transition: color 0.3s ease;
 
   span {
@@ -18,7 +18,7 @@ export const MenuItem = styled.a`
 export const ResumeBtn = styled.button`
   color: #64ffda;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 500;
   padding: 10px 20px;
   border: 1px solid #64ffda;
   border-radius: 4px;
@@ -36,7 +36,7 @@ export const CheckoutMyWorkBtn = styled.button`
   background-color: #64ffda;
   color: #0a1929;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 14px 28px;
   border: none;
   border-radius: 30px;
@@ -55,7 +55,7 @@ export const CheckoutMyWorkBtn = styled.button`
 export const ContactMeBtn = styled.button`
   color: #64ffda;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 500;
   padding: 14px 28px;
   border: 1px solid #64ffda;
   border-radius: 30px;

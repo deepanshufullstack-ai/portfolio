@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { ConnectBtn } from "./styled";
 
@@ -106,7 +106,45 @@ export default function Contact() {
             </div>
           </ConnectBtn>
         </div>
-        <div style={{ width: "50%" }}></div>
+        <div
+          style={{
+            width: "50%",
+            backgroundColor: "#0d1c37",
+            border: "1px solid #23355499",
+            borderRadius: "4px",
+            padding: "40px",
+          }}
+        >
+          <form action="">
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
+            >
+              <label htmlFor="">your name</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" />
+            </div>
+            <div>
+              <label htmlFor="">email address</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="john.doe@example.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="">message</label>
+              <textarea
+                name="name"
+                id="name"
+                placeholder="Hello Alex! I am looking for a frontend developer to help build out a new SaaS product..."
+                rows={5}
+              />
+            </div>
+            <button>
+              send message <Send />
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

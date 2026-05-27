@@ -102,7 +102,7 @@ export default function Navbar() {
         >
           <Hexagon size={26} color="#64ffda" />
 
-          <h1 style={{ fontSize: "14px", fontWeight: "200" }}>
+          <h1 style={{ fontSize: "14px", fontWeight: "500" }}>
             Deepanshu<span style={{ color: "#64ffda" }}>.</span>
           </h1>
         </a>
