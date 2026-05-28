@@ -24,7 +24,7 @@ export default function Hero() {
           style={{
             color: "#64ffda",
             textTransform: "uppercase",
-            fontSize: "16px",
+            fontSize: "15px",
             lineHeight: 1,
             fontWeight: "400",
             marginBottom: "16px",
@@ -57,7 +57,7 @@ export default function Hero() {
         <p
           style={{
             color: "#8892b0",
-            fontSize: "20px",
+            fontSize: "18px",
             fontFamily: "var(--font-bricolage-grotesque)",
             lineHeight: 1.5,
             marginTop: "20px",

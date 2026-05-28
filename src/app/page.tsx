@@ -1,10 +1,11 @@
 // import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Counters from "@/components/Counter";
+import Counter from "@/components/Counter";
 // import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Offer from "@/components/Offer";
 import Tech from "@/components/Tech";
 // import Work from "@/components/Work";
 
@@ -14,7 +15,8 @@ export default function Home() {
     <Navbar/>
       <main>
         <Hero />
-        <Counters/>
+        <Counter/>
+        <Offer/>
         <Tech/>
         {/* <About/> */}
         {/* <Experience/> */}

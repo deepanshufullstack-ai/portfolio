@@ -16,6 +16,7 @@ export default function Counter() {
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
           width: "100%",
+          // boxShadow: '0 10px 30px -10px #64ffda80'
         }}
       >
         <AutoCounter>
@@ -33,7 +34,7 @@ export default function Counter() {
           <p
             style={{
               fontSize: "14px",
-              fontWeight: "400",
+              fontWeight: "500",
               color: "#0b1b31",
               lineHeight: "1.5",
             }}
@@ -56,7 +57,7 @@ export default function Counter() {
           <p
             style={{
               fontSize: "14px",
-              fontWeight: "400",
+              fontWeight: "500",
               color: "#0b1b31",
               lineHeight: "1.5",
             }}
@@ -79,7 +80,7 @@ export default function Counter() {
           <p
             style={{
               fontSize: "14px",
-              fontWeight: "400",
+              fontWeight: "500",
               color: "#0b1b31",
               lineHeight: "1.5",
             }}
@@ -102,7 +103,7 @@ export default function Counter() {
           <p
             style={{
               fontSize: "14px",
-              fontWeight: "400",
+              fontWeight: "500",
               color: "#0b1b31",
               lineHeight: "1.5",
             }}

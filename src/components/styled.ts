@@ -295,7 +295,7 @@ export const AutoCounter = styled.div`
   padding: 52px 44px;
   background-color: #64ffda;
   border: 1px solid #0b1b31;
-  box-shadow: 0 10px 30px -10px #64ffda80;
+  /* box-shadow: 0 10px 30px -10px #64ffda80; */
 
   &:last-child {
     border-right: none;
