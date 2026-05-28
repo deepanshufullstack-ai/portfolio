@@ -242,8 +242,9 @@ export const TechItem = styled.div`
   border: 1px solid #23355499;
   border-radius: 8px;
   background-color: #0d1c37;
-  transition: transform 0.3s ease,
-  border 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border 0.3s ease;
 
   .iconContainer {
     width: 50px;
@@ -283,5 +284,20 @@ export const TechItem = styled.div`
     .techName {
       color: #64ffda;
     }
+  }
+`;
+
+//counter
+export const AutoCounter = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 52px 44px;
+  background-color: #64ffda;
+  border: 1px solid #0b1b31;
+  box-shadow: 0 10px 30px -10px #64ffda80;
+
+  &:last-child {
+    border-right: none;
   }
 `;

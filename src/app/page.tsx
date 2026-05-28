@@ -1,5 +1,6 @@
 // import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Counters from "@/components/Counter";
 // import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -13,6 +14,7 @@ export default function Home() {
     <Navbar/>
       <main>
         <Hero />
+        <Counters/>
         <Tech/>
         {/* <About/> */}
         {/* <Experience/> */}
