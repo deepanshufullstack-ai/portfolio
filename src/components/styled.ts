@@ -246,13 +246,13 @@ export const TechItem = styled.div`
   border 0.3s ease;
 
   .iconContainer {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #153446;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-bottom: 16px;
   }
