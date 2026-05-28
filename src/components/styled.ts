@@ -233,4 +233,55 @@ export const SendMessageBtn = styled.button`
   }
 `;
 
+// tech
+export const TechItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #23355499;
+  border-radius: 8px;
+  background-color: #0d1c37;
+  transition: transform 0.3s ease,
+  border 0.3s ease;
 
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #153446;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 16px;
+  }
+
+  .techName {
+    color: #ccd6f6;
+    font-size: 18px;
+    font-family: var(--font-bricolage-grotesque);
+    font-weight: 600;
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+
+  .description {
+    color: #8892b0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    border: 1px solid #64ffda;
+    transform: translateY(-4px);
+
+    .iconContainer {
+      background-color: #64ffdb54;
+    }
+
+    .techName {
+      color: #64ffda;
+    }
+  }
+`;

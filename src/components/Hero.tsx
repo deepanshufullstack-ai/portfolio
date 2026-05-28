@@ -17,7 +17,7 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          width: "80%",
+          width: "70%",
         }}
       >
         <span

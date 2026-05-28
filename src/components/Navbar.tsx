@@ -88,7 +88,7 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          width: "80%",
+          width: "70%",
         }}
       >
         <a
