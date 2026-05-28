@@ -115,7 +115,9 @@ export default function Navbar() {
             </MenuItem>
           ))}
 
-          <ResumeBtn>Resume</ResumeBtn>
+          <ResumeBtn href="/Deepanshu_Frontend.pdf" target="_blank">
+            Resume
+          </ResumeBtn>
         </div>
       </div>
     </nav>

@@ -12,6 +12,7 @@ export default function Home() {
     <Navbar/>
       <main>
         <Hero />
+        
         {/* <About/> */}
         {/* <Experience/> */}
         {/* <Work/> */}
