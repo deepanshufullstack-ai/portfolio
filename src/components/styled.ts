@@ -77,8 +77,8 @@ export const ConnectBtn = styled.a`
   gap: 10px;
 
   .icon-container {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +95,7 @@ export const ConnectBtn = styled.a`
     span {
       color: #8892b0;
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 1;
     }
@@ -103,7 +103,7 @@ export const ConnectBtn = styled.a`
     h1 {
       color: #ccd6f6;
       font-family: var(--font-bricolage-grotesque);
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 1;
       transition: color 0.3s ease;
@@ -120,3 +120,117 @@ export const ConnectBtn = styled.a`
     }
   }
 `;
+
+export const SubConnectBtn = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #23355499;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    border 0.3s ease;
+
+  .icon {
+    font-size: 18px;
+    color: #8892b0;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    border: 1px solid #64ffda;
+    transform: translateY(-4px);
+
+    .icon {
+      color: #64ffda;
+    }
+  }
+`;
+
+export const FormInputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+`;
+
+export const FormLabel = styled.label`
+  color: #ccd6f6;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+`;
+
+export const FormInput = styled.input`
+  border: 1px solid #23355499;
+  border-radius: 4px;
+  background-color: #0b1b31;
+  padding: 12px 16px;
+  outline: none;
+
+  &:focus {
+    border: 1px solid #64ffda;
+  }
+
+  &:hover {
+    border: 1px solid #64ffda;
+  }
+
+  &::placeholder {
+    color: #8892b0;
+    font-size: 14px;
+    font-family: var(--font-bricolage-grotesque);
+  }
+`;
+
+export const FormTextArea = styled.textarea`
+  border: 1px solid #23355499;
+  border-radius: 4px;
+  background-color: #0b1b31;
+  padding: 12px 16px;
+  resize: none;
+  outline: none;
+
+  &:focus {
+    border: 1px solid #64ffda;
+  }
+
+  &:hover {
+    border: 1px solid #64ffda;
+  }
+
+  &::placeholder {
+    color: #8892b0;
+    font-size: 14px;
+    font-family: var(--font-bricolage-grotesque);
+  }
+`;
+
+export const SendMessageBtn = styled.button`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #64ffda;
+  color: #0a1929;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+
