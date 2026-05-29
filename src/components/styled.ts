@@ -301,3 +301,92 @@ export const AutoCounter = styled.div`
     border-right: none;
   }
 `;
+
+//offer
+export const OfferItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #23355499;
+  border-radius: 0px;
+  background-color: #0d1c37;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    border 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #64ffda;
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+
+  span {
+    color: #64ffda;
+    text-transform: uppercase;
+    font-family: var(--font-bricolage-grotesque);
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 0.8;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    opacity: 0.1;
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64ffdb16;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 16px;
+  }
+
+  .offerTitle {
+    color: #ccd6f6;
+    font-size: 18px;
+    font-family: var(--font-bricolage-grotesque);
+    font-weight: 600;
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+
+  .description {
+    color: #8892b0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li {
+    color: #8892b0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    .icon-container {
+      background-color: #64ffdb22;
+    }
+  }
+`;

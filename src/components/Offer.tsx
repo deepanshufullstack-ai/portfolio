@@ -1,3 +1,6 @@
+import { OfferItem } from "./styled";
+import { RiComputerLine } from "react-icons/ri";
+
 export default function Offer() {
   return (
     <section
@@ -58,11 +61,16 @@ export default function Offer() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "20px",
           }}
         >
-          <div>
-            <h1>Frontend Development</h1>
-            <p>
+          <OfferItem>
+            <span>01</span>
+            <div className="icon-container">
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
               Building responsive and interactive user interfaces with modern
               web technologies.
             </p>
@@ -71,31 +79,87 @@ export default function Offer() {
               <li>Vue.js</li>
               <li>Angular</li>
             </ul>
-          </div>
-          <div>
-            <h1>Backend Development</h1>
-            <p>
-              Developing scalable and efficient server-side applications with
-              robust APIs.
+          </OfferItem>
+          <OfferItem>
+            <span>02</span>
+            <div className="icon-container">
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
+              Building responsive and interactive user interfaces with modern
+              web technologies.
             </p>
             <ul>
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>Java</li>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
             </ul>
-          </div>
-          <div>
-            <h1>UI/UX Design</h1>
-            <p>
-              Creating intuitive and visually appealing designs that enhance
-              user experience.
+          </OfferItem>
+          <OfferItem>
+            <span>03</span>
+            <div className="icon-container">
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
+              Building responsive and interactive user interfaces with modern
+              web technologies.
             </p>
             <ul>
-              <li>Figma</li>
-              <li>Adobe XD</li>
-              <li>Sketch</li>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
             </ul>
-          </div>
+          </OfferItem>
+          <OfferItem>
+            <span>02</span>
+            <div className="icon-container">
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
+              Building responsive and interactive user interfaces with modern
+              web technologies.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
+            </ul>
+          </OfferItem>
+          <OfferItem>
+            <span>02</span>
+            <div className="icon-container">
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
+              Building responsive and interactive user interfaces with modern
+              web technologies.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
+            </ul>
+          </OfferItem>
+          <OfferItem>
+            <span>02</span>
+            <div className="icon-container" >
+              <RiComputerLine color="#64ffda" size={24} />
+            </div>
+            <h1 className="offerTitle">Frontend Development</h1>
+            <p className="description">
+              Building responsive and interactive user interfaces with modern
+              web technologies.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Vue.js</li>
+              <li>Angular</li>
+            </ul>
+          </OfferItem>
         </div>
       </div>
     </section>
