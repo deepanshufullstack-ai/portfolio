@@ -16,7 +16,6 @@ export default function Counter() {
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
           width: "100%",
-          // boxShadow: '0 10px 30px -10px #64ffda80'
         }}
       >
         <AutoCounter>

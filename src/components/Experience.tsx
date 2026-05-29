@@ -2,6 +2,30 @@
 
 import { useEffect, useRef } from "react";
 
+const experiences = [
+  {
+    year: "Apr 2025 - Present",
+    title: "Junior Software Engineer",
+    company: "Kriotek Pvt Ltd",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+  },
+  {
+    year: "Apr 2025 - Present",
+    title: "Junior Software Engineer",
+    company: "Kriotek Pvt Ltd",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+  },
+  {
+    year: "Apr 2025 - Present",
+    title: "Junior Software Engineer",
+    company: "Kriotek Pvt Ltd",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+  },
+];
+
 export default function Experience() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -79,242 +103,108 @@ export default function Experience() {
         </div>
         <div
           style={{
+            width: "100%",
             display: "flex",
             flexDirection: "column",
             gap: "60px",
             borderLeft: "1px solid #23355499",
-            paddingLeft: "20px",
+            paddingLeft: "40px",
             position: "relative",
+            marginLeft: "13px",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          {experiences.map((exp, i) => (
             <div
+              key={i}
               style={{
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid #64ffda",
-                width: "18px",
-                height: "18px",
-                borderRadius: "50%",
-                position: "absolute",
-                left: "-10px",
+                flexDirection: "column",
+                gap: "10px",
+                width: "100%",
               }}
             >
               <div
                 style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#64ffda",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  border: "2px solid #64ffda",
+                  width: "18px",
+                  height: "18px",
                   borderRadius: "50%",
-                }}
-              />
-            </div>
-            <span
-              style={{
-                fontSize: "14px",
-                color: "#64ffda",
-                fontWeight: "400",
-                textTransform: "uppercase",
-              }}
-            >
-              Apr 2025 - Present
-            </span>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
-            >
-              <h1
-                style={{
-                  color: "#ccd6f6",
-                  fontSize: "24px",
-                  fontWeight: "700",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
+                  position: "absolute",
+                  left: "-10px",
                 }}
               >
-                Junior Software Engineer
-              </h1>
-              <h2
+                <div
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    backgroundColor: "#64ffda",
+                    borderRadius: "50%",
+                  }}
+                />
+              </div>
+              <span
                 style={{
-                  color: "#a8b2d1b3",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
+                  fontSize: "14px",
+                  color: "#64ffda",
+                  fontWeight: "200",
+                  textTransform: "uppercase",
                 }}
               >
-                Kriotek Pvt Ltd
-              </h2>
-            </div>
-            <p
-              style={{
-                color: "#a8b2d1b3",
-                fontSize: "16px",
-                fontWeight: "400",
-                fontFamily: "var(--font-bricolage-grotesque)",
-                lineHeight: 1.5,
-                width: "800px",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid,
-              at libero sint deleniti magnam dignissimos animi suscipit aliquam
-              velit esse neque nam voluptas id fugiat nostrum voluptatum nemo,
-              voluptatibus nisi? Molestias velit praesentium suscipit!
-            </p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid #64ffda",
-                width: "18px",
-                height: "18px",
-                borderRadius: "50%",
-                position: "absolute",
-                left: "-10px",
-              }}
-            >
+                Apr 2025 - Present
+              </span>
               <div
                 style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#64ffda",
-                  borderRadius: "50%",
-                }}
-              />
-            </div>
-            <span
-              style={{
-                fontSize: "14px",
-                color: "#64ffda",
-                fontWeight: "400",
-                textTransform: "uppercase",
-              }}
-            >
-              Apr 2025 - Present
-            </span>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
-            >
-              <h1
-                style={{
-                  color: "#ccd6f6",
-                  fontSize: "24px",
-                  fontWeight: "700",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "6px",
+                  marginBottom: "6px",
                 }}
               >
-                Junior Software Engineer
-              </h1>
-              <h2
+                <h1
+                  style={{
+                    color: "#ccd6f6",
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    fontFamily: "var(--font-bricolage-grotesque)",
+                    lineHeight: 1,
+                  }}
+                >
+                  Junior Software Engineer
+                </h1>
+                <h2
+                  style={{
+                    color: "#a8b2d1",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    fontFamily: "var(--font-bricolage-grotesque)",
+                    lineHeight: 1,
+                  }}
+                >
+                  Kriotek Pvt Ltd
+                </h2>
+              </div>
+              <p
                 style={{
-                  color: "#a8b2d1b3",
+                  color: "#8892b0",
                   fontSize: "16px",
-                  fontWeight: "500",
+                  fontWeight: "400",
                   fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
+                  lineHeight: 1.5,
+                  width: "60%",
                 }}
               >
-                Kriotek Pvt Ltd
-              </h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid,
+                at libero sint deleniti magnam dignissimos animi suscipit
+                aliquam velit esse neque nam voluptas id fugiat nostrum
+                voluptatum nemo, voluptatibus nisi? Molestias velit praesentium
+                suscipit!
+              </p>
             </div>
-            <p
-              style={{
-                color: "#a8b2d1b3",
-                fontSize: "16px",
-                fontWeight: "400",
-                fontFamily: "var(--font-bricolage-grotesque)",
-                lineHeight: 1.5,
-                width: "800px",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid,
-              at libero sint deleniti magnam dignissimos animi suscipit aliquam
-              velit esse neque nam voluptas id fugiat nostrum voluptatum nemo,
-              voluptatibus nisi? Molestias velit praesentium suscipit!
-            </p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid #64ffda",
-                width: "18px",
-                height: "18px",
-                borderRadius: "50%",
-                position: "absolute",
-                left: "-10px",
-              }}
-            >
-              <div
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  backgroundColor: "#64ffda",
-                  borderRadius: "50%",
-                }}
-              />
-            </div>
-            <span
-              style={{
-                fontSize: "14px",
-                color: "#64ffda",
-                fontWeight: "400",
-                textTransform: "uppercase",
-              }}
-            >
-              Apr 2025 - Present
-            </span>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
-            >
-              <h1
-                style={{
-                  color: "#ccd6f6",
-                  fontSize: "24px",
-                  fontWeight: "700",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
-                }}
-              >
-                Junior Software Engineer
-              </h1>
-              <h2
-                style={{
-                  color: "#a8b2d1b3",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  fontFamily: "var(--font-bricolage-grotesque)",
-                  lineHeight: 1,
-                }}
-              >
-                Kriotek Pvt Ltd
-              </h2>
-            </div>
-            <p
-              style={{
-                color: "#a8b2d1b3",
-                fontSize: "16px",
-                fontWeight: "400",
-                fontFamily: "var(--font-bricolage-grotesque)",
-                lineHeight: 1.5,
-                width: "800px",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid,
-              at libero sint deleniti magnam dignissimos animi suscipit aliquam
-              velit esse neque nam voluptas id fugiat nostrum voluptatum nemo,
-              voluptatibus nisi? Molestias velit praesentium suscipit!
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

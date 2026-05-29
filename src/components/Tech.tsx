@@ -9,6 +9,54 @@ import { SiNestjs } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 
+const techs = [
+  {
+    name: "JavaScript",
+    description:
+      "A programming language that is one of the core technologies of the web.",
+    icon: <RiJavascriptLine color="#64ffda" size={22} />,
+  },
+  {
+    name: "TypeScript",
+    description:
+      "A strongly typed programming language that builds on JavaScript.",
+    icon: <SiTypescript color="#64ffda" size={22} />,
+  },
+  {
+    name: "React.js",
+    description: "A JavaScript library for building user interfaces.",
+    icon: <FaReact color="#64ffda" size={22} />,
+  },
+  {
+    name: "Next.js",
+    description:
+      "A React framework for building server-side rendered applications.",
+    icon: <RiNextjsLine color="#64ffda" size={22} />,
+  },
+  {
+    name: "Node.js",
+    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    icon: <FaNodeJs color="#64ffda" size={22} />,
+  },
+  {
+    name: "Nest.js",
+    description:
+      "A progressive Node.js framework for building efficient and scalable server-side applications.",
+    icon: <SiNestjs color="#64ffda" size={22} />,
+  },
+  {
+    name: "MongoDB",
+    description:
+      "A general-purpose, document-based, distributed database program.",
+    icon: <SiMongodb color="#64ffda" size={22} />,
+  },
+  {
+    name: "PostgreSQL",
+    description: "A powerful, open-source object-relational database system.",
+    icon: <SiPostgresql color="#64ffda" size={22} />,
+  },
+];
+
 export default function Tech() {
   return (
     <section
@@ -72,79 +120,13 @@ export default function Tech() {
             gap: "30px",
           }}
         >
-          <TechItem>
-            <div className="iconContainer">
-              <RiJavascriptLine color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">JavaScript</h2>
-            <p className="description">
-              A programming language that is one of the core technologies of the
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <SiTypescript color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">TypeScript</h2>
-            <p className="description">
-              A strongly typed programming language that builds on JavaScript
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <FaReact color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">React.js</h2>
-            <p className="description">
-              A JavaScript library for building user interfaces
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <RiNextjsLine color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">Next.js</h2>
-            <p className="description">
-              A React framework for building server-side rendered applications
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <FaNodeJs color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">Node.js</h2>
-            <p className="description">
-              A JavaScript runtime built on Chromes V8 JavaScript engine
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <SiNestjs color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">NestJS</h2>
-            <p className="description">
-              A JavaScript framework for building efficient and scalable
-              server-side applications
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <SiMongodb color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">MongoDB</h2>
-            <p className="description">
-              A NoSQL database for handling unstructured data
-            </p>
-          </TechItem>
-          <TechItem>
-            <div className="iconContainer">
-              <SiPostgresql color="#64ffda" size={22} />
-            </div>
-            <h2 className="techName">PostgreSQL</h2>
-            <p className="description">
-              A powerful, open-source object-relational database system
-            </p>
-          </TechItem>
+          {techs.map((tech, i) => (
+            <TechItem key={i}>
+              <div className="iconContainer">{tech.icon}</div>
+              <h2 className="techName">{tech.name}</h2>
+              <p className="description">{tech.description}</p>
+            </TechItem>
+          ))}
         </div>
       </div>
     </section>
