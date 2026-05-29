@@ -9,7 +9,6 @@ import { SiNestjs } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 
-
 export default function Tech() {
   return (
     <section
