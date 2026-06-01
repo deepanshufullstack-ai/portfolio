@@ -1,116 +1,23 @@
-import { AutoCounter } from "./styled";
+import { AutoCounter, CounterGrid, CounterSection } from "./styled";
+
+const counters = [
+  { count: "5+", label: "Years of Experience" },
+  { count: "20+", label: "Projects Completed" },
+  { count: "10+", label: "Happy Clients" },
+  { count: "3", label: "Awards Won" },
+];
 
 export default function Counter() {
   return (
-    <section
-      style={{
-        minHeight: "fit-content",
-        minWidth: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          width: "100%",
-        }}
-      >
-        <AutoCounter>
-          <h1
-            style={{
-              fontSize: "60px",
-              fontWeight: "800",
-              color: "#0b1b31",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: "1",
-            }}
-          >
-            40+
-          </h1>
-          <p
-            style={{
-              fontSize: "14px",
-              fontWeight: "500",
-              color: "#0b1b31",
-              lineHeight: "1.5",
-            }}
-          >
-            Projects Completed
-          </p>
-        </AutoCounter>
-        <AutoCounter>
-          <h1
-            style={{
-              fontSize: "60px",
-              fontWeight: "800",
-              color: "#0b1b31",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: "1",
-            }}
-          >
-            40+
-          </h1>
-          <p
-            style={{
-              fontSize: "14px",
-              fontWeight: "500",
-              color: "#0b1b31",
-              lineHeight: "1.5",
-            }}
-          >
-            Projects Completed
-          </p>
-        </AutoCounter>
-        <AutoCounter>
-          <h1
-            style={{
-              fontSize: "60px",
-              fontWeight: "800",
-              color: "#0b1b31",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: "1",
-            }}
-          >
-            40+
-          </h1>
-          <p
-            style={{
-              fontSize: "14px",
-              fontWeight: "500",
-              color: "#0b1b31",
-              lineHeight: "1.5",
-            }}
-          >
-            Projects Completed
-          </p>
-        </AutoCounter>
-        <AutoCounter>
-          <h1
-            style={{
-              fontSize: "60px",
-              fontWeight: "800",
-              color: "#0b1b31",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: "1",
-            }}
-          >
-            40+
-          </h1>
-          <p
-            style={{
-              fontSize: "14px",
-              fontWeight: "500",
-              color: "#0b1b31",
-              lineHeight: "1.5",
-            }}
-          >
-            Projects Completed
-          </p>
-        </AutoCounter>
-      </div>
-    </section>
+    <CounterSection>
+      <CounterGrid>
+        {counters.map((counter, index) => (
+          <AutoCounter key={index}>
+            <h1>{counter.count}</h1>
+            <p>{counter.label}</p>
+          </AutoCounter>
+        ))}
+      </CounterGrid>
+    </CounterSection>
   );
 }

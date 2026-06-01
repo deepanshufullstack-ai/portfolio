@@ -3,6 +3,8 @@
 import { Hexagon, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
+  Circle,
+  DrawerContainer,
   Logo,
   LogoText,
   MenuItem,
@@ -13,6 +15,7 @@ import {
   ProgressBar,
   ResumeBtn,
 } from "./styled";
+import { Drawer } from "@mui/material";
 
 const navLinks = [
   { menu: "About", href: "#about" },
@@ -86,6 +89,7 @@ export default function Navbar() {
           </ResumeBtn>
         </NavMenu>
 
+        {/* mobile menu button */}
         <MobileResumeBtn onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? (
             <X size={20} color="#64ffda" />
@@ -94,6 +98,24 @@ export default function Navbar() {
           )}
         </MobileResumeBtn>
       </NavbarWrapper>
+
+      {/* mobile menu */}
+      <Drawer open={menuOpen} onClose={() => setMenuOpen(false)}>
+        <DrawerContainer role="presentation" onClick={() => setMenuOpen(false)}>
+          {navLinks.map((item, index) => (
+            <MenuItem key={item.menu} href={item.href}>
+              <span>0{index + 1}. </span>
+              {item.menu}
+            </MenuItem>
+          ))}
+
+          <Circle />
+
+          <ResumeBtn href="/Deepanshu_Frontend.pdf" target="_blank">
+            Resume
+          </ResumeBtn>
+        </DrawerContainer>
+      </Drawer>
     </NavbarContainer>
   );
 }

@@ -71,6 +71,7 @@ export const NavMenu = styled.div`
 `;
 
 export const MenuItem = styled.a`
+  color: #e5e7eb;
   font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -85,6 +86,10 @@ export const MenuItem = styled.a`
 `;
 
 export const ResumeBtn = styled.a`
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #64ffda;
   font-size: 14px;
   font-weight: 500;
@@ -130,6 +135,27 @@ export const MobileResumeBtn = styled.a`
   @media (min-width: 769px) {
     display: none;
   }
+`;
+
+export const DrawerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  background-color: #0b1b31;
+  height: 100%;
+  width: 300px;
+`;
+
+export const Circle = styled.div`
+  border-radius: 50%;
+  background-color: #64ffda80;
+  opacity: 0.5;
+  box-shadow: 0 20px 100px 200px #64ffda80;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 //hero
@@ -187,10 +213,10 @@ export const HeroSubHeading = styled.h2`
   font-weight: 700;
   font-family: var(--font-bricolage-grotesque);
   line-height: 1.1;
+  margin-bottom: 16px;
 
   @media (max-width: 768px) {
     font-size: 40px;
-    margin-bottom: 16px;
   }
 `;
 
@@ -199,7 +225,7 @@ export const HeroDescription = styled.p`
   font-size: 18px;
   font-family: var(--font-bricolage-grotesque);
   line-height: 1.5;
-  max-width: 540px;
+  max-width: 600px;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -469,6 +495,24 @@ export const TechItem = styled.div`
 `;
 
 //counter
+export const CounterSection = styled.section`
+  min-height: fit-content;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CounterGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
 export const AutoCounter = styled.div`
   display: flex;
   flex-direction: column;
@@ -476,7 +520,21 @@ export const AutoCounter = styled.div`
   padding: 52px 44px;
   background-color: #64ffda;
   border: 1px solid #0b1b31;
-  /* box-shadow: 0 10px 30px -10px #64ffda80; */
+
+  h1 {
+    color: #0b1b31;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+  }
+
+  p {
+    color: #0b1b31;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
 
   &:last-child {
     border-right: none;
