@@ -15,15 +15,15 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Counter />
+        {/* <Counter />
         <Offer />
         <Tech />
         <About />
         <Experience />
         <Work/>
-        <Contact />
+        <Contact /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
