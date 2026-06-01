@@ -1,4 +1,10 @@
-import { TechItem } from "./styled";
+import {
+  TechContent,
+  TechGrid,
+  TechHeadingContainer,
+  TechItem,
+  TechSection,
+} from "./styled";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { RiJavascriptLine } from "react-icons/ri";
@@ -59,67 +65,14 @@ const techs = [
 
 export default function Tech() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        minWidth: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "60px",
-          width: "70%",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-          }}
-        >
-          <span
-            style={{
-              color: "#64ffda",
-              textTransform: "uppercase",
-              fontSize: "18px",
-              fontWeight: "400",
-            }}
-          >
-            02.
-          </span>
-          <h1
-            style={{
-              color: "#ccd6f6",
-              fontSize: "36px",
-              fontWeight: "700",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: 1,
-            }}
-          >
-            My Tech Stack
-          </h1>
-          <div
-            style={{
-              width: "30%",
-              height: "1px",
-              backgroundColor: "#23355499",
-            }}
-          />
-        </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "30px",
-          }}
-        >
+    <TechSection>
+      <TechContent>
+        <TechHeadingContainer>
+          <span>02.</span>
+          <h1>My Tech Stack</h1>
+          <div />
+        </TechHeadingContainer>
+        <TechGrid>
           {techs.map((tech, i) => (
             <TechItem key={i}>
               <div className="iconContainer">{tech.icon}</div>
@@ -127,8 +80,8 @@ export default function Tech() {
               <p className="description">{tech.description}</p>
             </TechItem>
           ))}
-        </div>
-      </div>
-    </section>
+        </TechGrid>
+      </TechContent>
+    </TechSection>
   );
 }

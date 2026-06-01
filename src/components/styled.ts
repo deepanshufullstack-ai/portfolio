@@ -278,6 +278,75 @@ export const ContactMeBtn = styled.button`
 `;
 
 //contact
+export const ContactSection = styled.section`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
+`;
+
+export const ContactContent = styled.div`
+  display: flex;
+  gap: 40px;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+`;
+
+export const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  span {
+    color: #64ffda;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  h1 {
+    color: #ccd6f6;
+    font-family: var(--font-bricolage-grotesque);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  p {
+    color: #8892b0;
+    font-size: 18px;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1.5;
+    max-width: 620px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+`;
+
 export const ConnectBtn = styled.a`
   display: flex;
   align-items: center;
@@ -328,6 +397,13 @@ export const ConnectBtn = styled.a`
   }
 `;
 
+export const SubConnectBtnContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+`;
+
 export const SubConnectBtn = styled.a`
   display: flex;
   align-items: center;
@@ -354,6 +430,20 @@ export const SubConnectBtn = styled.a`
     .icon {
       color: #64ffda;
     }
+  }
+`;
+
+export const FormContainer = styled.div`
+  width: 50%;
+  height: fit-content;
+  background-color: #0d1c37;
+  border: 1px solid #23355499;
+  border-radius: 12px;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 24px;
   }
 `;
 
@@ -390,7 +480,7 @@ export const FormInput = styled.input`
   &::placeholder {
     color: #8892b0;
     font-size: 16px;
-    font-family: var(--font - bricolage - grotesque);
+    font-family: var(--font-bricolage-grotesque);
   }
 `;
 
@@ -413,7 +503,7 @@ export const FormTextArea = styled.textarea`
   &::placeholder {
     color: #8892b0;
     font-size: 16px;
-    font-family: var(--font - bricolage - grotesque);
+    font-family: var(--font-bricolage-grotesque);
   }
 `;
 
@@ -441,6 +531,79 @@ export const SendMessageBtn = styled.button`
 `;
 
 // tech
+export const TechSection = styled.section`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+`;
+
+export const TechContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 40px;
+  }
+`;
+
+export const TechHeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  span {
+    color: #64ffda;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  h1 {
+    color: #ccd6f6;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  div {
+    width: 30%;
+    height: 1px;
+    background-color: #23355499;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+export const TechGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
 export const TechItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -700,5 +863,150 @@ export const OfferItem = styled.div`
     div {
       background-color: #64ffdb22;
     }
+  }
+`;
+
+// experience
+export const ExperienceSection = styled.section`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
+`;
+
+export const ExperienceContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 50px;
+  }
+`;
+
+export const ExperienceHeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  span {
+    color: #64ffda;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  h1 {
+    color: #ccd6f6;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  div {
+    width: 30%;
+    height: 1px;
+    background-color: #23355499;
+  }
+`;
+
+export const ExperienceGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border-left: 1px solid #23355499;
+  padding-left: 40px;
+  position: relative;
+  margin-left: 13px;
+
+  @media (max-width: 768px) {
+    gap: 40px;
+    padding-left: 20px;
+    margin-left: 8px;
+  }
+`;
+
+export const ExperienceItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+`;
+
+export const ExperienceItemPointer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #64ffda;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+
+  div {
+    width: 6px;
+    height: 6px;
+    background-color: #64ffda;
+    border-radius: 50%;
+  }
+`;
+
+export const ExperienceItemDate = styled.span`
+  color: #64ffda;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+`;
+
+export const ExperienceItemHeadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+
+  h1 {
+    color: #ccd6f6;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+  }
+
+  h2 {
+    color: #a8b2d1;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+  }
+`;
+
+export const ExperienceItemDescription = styled.p`
+  color: #8892b0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-bricolage-grotesque);
+  line-height: 1.5;
+  width: 60%;
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;

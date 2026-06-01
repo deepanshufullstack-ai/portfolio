@@ -8,12 +8,17 @@ import { Mail, MapPin, Send } from "lucide-react";
 import { useEffect, useRef } from "react";
 import {
   ConnectBtn,
+  ContactContent,
+  ContactInfo,
+  ContactSection,
+  FormContainer,
   FormInput,
   FormInputContainer,
   FormLabel,
   FormTextArea,
   SendMessageBtn,
   SubConnectBtn,
+  SubConnectBtnContainer,
 } from "./styled";
 
 export default function Contact() {
@@ -34,68 +39,15 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
   return (
-    <section
-      id="contact"
-      ref={ref}
-      style={{
-        minHeight: "100vh",
-        minWidth: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          gap: "40px",
-          width: "70%",
-        }}
-      >
-        <div
-          style={{
-            width: "50%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-          }}
-        >
-          <span
-            style={{
-              color: "#64ffda",
-              textTransform: "uppercase",
-              fontSize: "14px",
-              fontWeight: "400",
-            }}
-          >
-            04. whats next
-          </span>
-          <h1
-            style={{
-              color: "#ccd6f6",
-              fontSize: "60px",
-              fontWeight: "700",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: 1,
-            }}
-          >
-            Lets build
-            <br /> something
-            <br /> together.
-          </h1>
-          <p
-            style={{
-              color: "#8892b0",
-              fontSize: "18px",
-              fontFamily: "var(--font-bricolage-grotesque)",
-              lineHeight: 1.5,
-              maxWidth: "620px",
-            }}
-          >
+    <ContactSection id="contact" ref={ref}>
+      <ContactContent>
+        <ContactInfo>
+          <span>04. whats next</span>
+          <h1>Lets build something together.</h1>
+          <p>
             Whether you have a specific project in mind, an exciting
-            <br />
-            opportunity, or just want to connect — my inbox is always
-            <br /> open. Ill try my best to get back to you!
+            opportunity, or just want to connect — my inbox is always open. Ill
+            try my best to get back to you!
           </p>
 
           <ConnectBtn href="" style={{ marginTop: "20px" }}>
@@ -116,14 +68,7 @@ export default function Contact() {
               <h1>San Francisco, CA</h1>
             </div>
           </ConnectBtn>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              marginTop: "20px",
-            }}
-          >
+          <SubConnectBtnContainer>
             <SubConnectBtn>
               <LuGithub className="icon" />
             </SubConnectBtn>
@@ -133,18 +78,9 @@ export default function Contact() {
             <SubConnectBtn>
               <LuTwitter className="icon" />
             </SubConnectBtn>
-          </div>
-        </div>
-        <div
-          style={{
-            width: "50%",
-            height: "fit-content",
-            backgroundColor: "#0d1c37",
-            border: "1px solid #23355499",
-            borderRadius: "12px",
-            padding: "40px",
-          }}
-        >
+          </SubConnectBtnContainer>
+        </ContactInfo>
+        <FormContainer>
           <form action="">
             <FormInputContainer>
               <FormLabel htmlFor="">your name</FormLabel>
@@ -177,8 +113,8 @@ export default function Contact() {
               Send Message <Send color="#0a1929" size={16} />
             </SendMessageBtn>
           </form>
-        </div>
-      </div>
-    </section>
+        </FormContainer>
+      </ContactContent>
+    </ContactSection>
   );
 }

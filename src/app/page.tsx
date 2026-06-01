@@ -14,14 +14,14 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
-        <Counter />
-        <Offer />
-        {/* <Tech />
-        <About />
-        <Experience />
-        <Work/>
-        <Contact /> */}
+        {/* <Hero /> */}
+        {/* <Counter /> */}
+        {/* <Offer /> */}
+        {/* <Tech /> */}
+        {/* <About /> */}
+        {/* <Experience /> */}
+        {/* <Work/> */}
+        <Contact />
       </main>
       {/* <Footer /> */}
     </>
