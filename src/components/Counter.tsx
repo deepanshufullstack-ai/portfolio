@@ -1,4 +1,4 @@
-import { AutoCounter, CounterGrid, CounterSection } from "./styled";
+import styled from "styled-components";
 
 const counters = [
   { count: "5+", label: "Years of Experience" },
@@ -21,3 +21,50 @@ export default function Counter() {
     </CounterSection>
   );
 }
+
+//counter
+export const CounterSection = styled.section`
+  min-height: fit-content;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CounterGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const AutoCounter = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 52px 44px;
+  background-color: #64ffda;
+  border: 1px solid #0b1b31;
+
+  h1 {
+    color: #0b1b31;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+  }
+
+  p {
+    color: #0b1b31;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+`;
