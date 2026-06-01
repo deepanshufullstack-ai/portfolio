@@ -542,6 +542,79 @@ export const AutoCounter = styled.div`
 `;
 
 //offer
+export const OfferSection = styled.section`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
+`;
+
+export const OfferContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 40px;
+  }
+`;
+
+export const OfferHeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const OfferIntro = styled.span`
+  color: #64ffda;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+export const OfferHeading = styled.h1`
+  color: #ccd6f6;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--font-bricolage-grotesque);
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
+
+export const OfferLine = styled.div`
+  width: 30%;
+  height: 1px;
+  background-color: #23355499;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const OfferGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
 export const OfferItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -575,7 +648,7 @@ export const OfferItem = styled.div`
   span {
     color: #64ffda;
     text-transform: uppercase;
-    font-family: var(--font - bricolage - grotesque);
+    font-family: var(--font-bricolage-grotesque);
     font-size: 120px;
     font-weight: 700;
     line-height: 0.8;
@@ -585,7 +658,7 @@ export const OfferItem = styled.div`
     opacity: 0.1;
   }
 
-  .icon-container {
+  div {
     width: 50px;
     height: 50px;
     display: flex;
@@ -597,22 +670,22 @@ export const OfferItem = styled.div`
     margin-bottom: 16px;
   }
 
-  .offerTitle {
+  h1 {
     color: #ccd6f6;
     font-size: 18px;
-    font-family: var(--font - bricolage - grotesque);
+    font-family: var(--font-bricolage-grotesque);
     font-weight: 600;
     line-height: 1;
     transition: color 0.3s ease;
   }
 
-  .description {
+  p {
     color: #8892b0;
     font-size: 14px;
     line-height: 1.5;
   }
 
-  .ul {
+  ul {
     list-style-type: disc;
     padding-left: 20px;
   }
@@ -624,7 +697,7 @@ export const OfferItem = styled.div`
   }
 
   &:hover {
-    .icon-container {
+    div {
       background-color: #64ffdb22;
     }
   }

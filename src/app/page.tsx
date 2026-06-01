@@ -16,8 +16,8 @@ export default function Home() {
       <main>
         <Hero />
         <Counter />
-        {/* <Offer />
-        <Tech />
+        <Offer />
+        {/* <Tech />
         <About />
         <Experience />
         <Work/>
