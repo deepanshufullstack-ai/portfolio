@@ -37,7 +37,7 @@ export default function Contact() {
             try my best to get back to you!
           </p>
 
-          <ConnectBtn href="" style={{ marginTop: "20px" }}>
+          <ConnectBtn href="">
             <div className="icon-container">
               <Mail color="#64ffda" size={18} className="icon" />
             </div>
@@ -55,6 +55,7 @@ export default function Contact() {
               <h1>San Francisco, CA</h1>
             </div>
           </ConnectBtn>
+
           <SubConnectBtnContainer>
             <SubConnectBtn>
               <LuGithub className="icon" />
@@ -106,7 +107,6 @@ export default function Contact() {
   );
 }
 
-//contact
 export const ContactSection = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -115,7 +115,7 @@ export const ContactSection = styled.section`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 80px 20px;
+    padding: 20px;
   }
 `;
 
@@ -137,13 +137,14 @@ export const ContactInfo = styled.div`
   width: 50%;
 
   @media (max-width: 768px) {
+    gap: 12px;
     width: 100%;
   }
 
   span {
     color: #64ffda;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
 
     @media (max-width: 768px) {
@@ -154,12 +155,13 @@ export const ContactInfo = styled.div`
   h1 {
     color: #ccd6f6;
     font-family: var(--font-bricolage-grotesque);
-    font-size: 16px;
+    font-size: 60px;
     font-weight: 600;
     line-height: 1;
 
     @media (max-width: 768px) {
       font-size: 36px;
+      margin-bottom: 12px;
     }
   }
 
@@ -172,6 +174,7 @@ export const ContactInfo = styled.div`
 
     @media (max-width: 768px) {
       font-size: 16px;
+      margin-bottom: 20px;
     }
   }
 `;
@@ -212,6 +215,10 @@ export const ConnectBtn = styled.a`
       font-weight: 400;
       line-height: 1;
       transition: color 0.3s ease;
+
+      @media (max-width: 768px) {
+        margin-bottom: 0px;
+      }
     }
   }
 
@@ -231,6 +238,10 @@ export const SubConnectBtnContainer = styled.div`
   align-items: center;
   gap: 20px;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 `;
 
 export const SubConnectBtn = styled.a`
@@ -272,7 +283,7 @@ export const FormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 24px;
+    padding:  40px 20px;
   }
 `;
 
@@ -310,6 +321,10 @@ export const FormInput = styled.input`
     color: #8892b0;
     font-size: 16px;
     font-family: var(--font-bricolage-grotesque);
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 8px;
   }
 `;
 
