@@ -81,7 +81,7 @@ export default function Tech() {
   );
 }
 
-// tech
+
 export const TechSection = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -90,7 +90,7 @@ export const TechSection = styled.section`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 20px;
   }
 `;
 
@@ -130,7 +130,7 @@ export const TechHeadingContainer = styled.div`
     line-height: 1;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
 
@@ -138,10 +138,6 @@ export const TechHeadingContainer = styled.div`
     width: 30%;
     height: 1px;
     background-color: #23355499;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 `;
 
@@ -152,6 +148,7 @@ export const TechGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 `;
 

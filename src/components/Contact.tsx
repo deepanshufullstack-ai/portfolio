@@ -29,9 +29,9 @@ export default function Contact() {
     <ContactSection id="contact" ref={ref}>
       <ContactContent>
         <ContactInfo>
-          <span>04. whats next</span>
-          <h1>Lets build something together.</h1>
-          <p>
+          <span className="intro">04. whats next</span>
+          <h1 className="heading">Lets build something together.</h1>
+          <p className="description">
             Whether you have a specific project in mind, an exciting
             opportunity, or just want to connect — my inbox is always open. Ill
             try my best to get back to you!
@@ -133,7 +133,7 @@ export const ContactContent = styled.div`
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   width: 50%;
 
   @media (max-width: 768px) {
@@ -141,7 +141,7 @@ export const ContactInfo = styled.div`
     width: 100%;
   }
 
-  span {
+  .intro {
     color: #64ffda;
     text-transform: uppercase;
     font-size: 14px;
@@ -152,29 +152,32 @@ export const ContactInfo = styled.div`
     }
   }
 
-  h1 {
+  .heading {
     color: #ccd6f6;
     font-family: var(--font-bricolage-grotesque);
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
+    width: 70%;
 
     @media (max-width: 768px) {
       font-size: 36px;
-      margin-bottom: 12px;
+      width: 100%;
     }
   }
 
-  p {
+  .description {
     color: #8892b0;
     font-size: 18px;
     font-family: var(--font-bricolage-grotesque);
     line-height: 1.5;
     max-width: 620px;
+    margin-bottom: 20px;
+    width: 80%;
 
     @media (max-width: 768px) {
       font-size: 16px;
-      margin-bottom: 20px;
+      width: 100%;
     }
   }
 `;
@@ -210,7 +213,7 @@ export const ConnectBtn = styled.a`
 
     h1 {
       color: #ccd6f6;
-      font-family: var(--font - bricolage - grotesque);
+      font-family: var(--font-bricolage-grotesque);
       font-size: 16px;
       font-weight: 400;
       line-height: 1;
@@ -236,7 +239,7 @@ export const ConnectBtn = styled.a`
 export const SubConnectBtnContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   margin-top: 20px;
 
   @media (max-width: 768px) {
@@ -283,7 +286,6 @@ export const FormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding:  40px 20px;
   }
 `;
 
@@ -295,7 +297,7 @@ export const FormInputContainer = styled.div`
 `;
 
 export const FormLabel = styled.label`
-  color: #ccd6f6;
+  color: #8892b0;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
@@ -308,6 +310,8 @@ export const FormInput = styled.input`
   background-color: #0b1b31;
   padding: 12px 16px;
   outline: none;
+  font-family: var(--font-bricolage-grotesque);
+  color: #ccd6f6;
 
   &:focus {
     border: 1px solid #64ffda;
@@ -318,9 +322,8 @@ export const FormInput = styled.input`
   }
 
   &::placeholder {
-    color: #8892b0;
+    color: #8892b074;
     font-size: 16px;
-    font-family: var(--font-bricolage-grotesque);
   }
 
   @media (max-width: 768px) {
@@ -335,6 +338,8 @@ export const FormTextArea = styled.textarea`
   padding: 12px 16px;
   resize: none;
   outline: none;
+  font-family: var(--font-bricolage-grotesque);
+  color: #e5e7eb;
 
   &:focus {
     border: 1px solid #64ffda;
@@ -345,9 +350,8 @@ export const FormTextArea = styled.textarea`
   }
 
   &::placeholder {
-    color: #8892b0;
+    color: #8892b074;
     font-size: 16px;
-    font-family: var(--font-bricolage-grotesque);
   }
 `;
 

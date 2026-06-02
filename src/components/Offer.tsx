@@ -72,7 +72,7 @@ export default function Offer() {
   );
 }
 
-//offer
+
 export const OfferSection = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -81,7 +81,7 @@ export const OfferSection = styled.section`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 80px 20px;
+    padding: 20px;
   }
 `;
 
@@ -122,7 +122,7 @@ export const OfferHeading = styled.h1`
   line-height: 1;
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
@@ -130,10 +130,6 @@ export const OfferLine = styled.div`
   width: 30%;
   height: 1px;
   background-color: #23355499;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const OfferGrid = styled.div`

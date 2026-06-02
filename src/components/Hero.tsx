@@ -81,7 +81,7 @@ export const HeroSubHeading = styled.h2`
   margin-bottom: 16px;
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 36px;
   }
 `;
 
@@ -115,7 +115,7 @@ export const CheckoutMyWorkBtn = styled.button`
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 10px 30px - 10px #64ffda80;
+  box-shadow: 0 10px 30px -10px #64ffda80;
   transition: transform 0.3s ease;
   cursor: pointer;
 

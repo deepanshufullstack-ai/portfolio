@@ -80,7 +80,6 @@ export default function Experience() {
   );
 }
 
-// experience
 export const ExperienceSection = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -89,7 +88,7 @@ export const ExperienceSection = styled.section`
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: 80px 20px;
+    padding: 20px;
   }
 `;
 
@@ -129,7 +128,7 @@ export const ExperienceHeadingContainer = styled.div`
     line-height: 1;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
 
@@ -187,6 +186,10 @@ export const ExperienceItemDate = styled.span`
   font-size: 14px;
   font-weight: 200;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const ExperienceItemHeadingContainer = styled.div`
@@ -201,6 +204,10 @@ export const ExperienceItemHeadingContainer = styled.div`
     font-weight: 600;
     font-family: var(--font-bricolage-grotesque);
     line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   h2 {
@@ -209,6 +216,10 @@ export const ExperienceItemHeadingContainer = styled.div`
     font-weight: 600;
     font-family: var(--font-bricolage-grotesque);
     line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 `;
 
