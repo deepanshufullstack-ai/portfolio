@@ -18,7 +18,7 @@ export default function Home() {
         <Counter />
         <Offer />
         <Tech />
-        {/* <About /> */}
+        <About />
         <Experience />
         {/* <Work /> */}
         <Contact />
