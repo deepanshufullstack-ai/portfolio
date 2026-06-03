@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import styled from "styled-components";
 
 export default function Work() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,40 +21,73 @@ export default function Work() {
     return () => observer.disconnect();
   }, []);
   return (
-    <section
-      id="work"
-      ref={ref}
-      style={{
-        minHeight: "100vh",
-        minWidth: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "40px",
-          width: "70%",
-        }}
-      >
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
-          praesentium alias aspernatur ratione, deleniti ipsum quis animi
-          dolores provident quia quod, laboriosam eos fuga ea laudantium earum
-          iste doloribus vero placeat! Ex nesciunt sequi tenetur necessitatibus
-          beatae recusandae rem repellendus tempora, in nostrum quia, excepturi
-          error perspiciatis ut quibusdam, iste debitis quis aliquam odit ipsam
-          similique nisi. Architecto commodi quas excepturi impedit, repudiandae
-          voluptates veniam vero aliquam. Voluptates soluta vel nobis
-          consectetur. Ad dolore, quisquam tempore cum provident fugit sapiente
-          dolores, iusto eaque facere eum temporibus error quae, voluptate
-          architecto cupiditate dignissimos similique. Pariatur dolores quia
-          beatae rerum, fugiat totam.
-        </p>
-      </div>
-    </section>
+    <WorkSection id="work" ref={ref}>
+      <WorkContent>
+        <WorkHeadingContainer>
+          <span>01.</span>
+          <h1>Some Things I've Built</h1>
+          <div />
+        </WorkHeadingContainer>
+      </WorkContent>
+    </WorkSection>
   );
 }
+
+export const WorkSection = styled.section`
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+`;
+
+export const WorkContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 40px;
+  }
+`;
+
+export const WorkHeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  span {
+    color: #64ffda;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  h1 {
+    color: #ccd6f6;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--font-bricolage-grotesque);
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  div {
+    width: 30%;
+    height: 1px;
+    background-color: #23355499;
+  }
+`;
