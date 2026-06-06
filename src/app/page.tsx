@@ -7,7 +7,6 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Offer from "@/components/Offer";
 import Tech from "@/components/Tech";
-import Test from "@/components/Test";
 import Work from "@/components/Work";
 
 export default function Home() {
