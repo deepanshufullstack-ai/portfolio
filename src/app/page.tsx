@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Offer from "@/components/Offer";
 import Tech from "@/components/Tech";
+import Test from "@/components/Test";
 import Work from "@/components/Work";
 
 export default function Home() {
@@ -14,14 +15,15 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* <Hero /> */}
-        {/* <Counter /> */}
-        {/* <About /> */}
-        {/* <Offer /> */}
-        {/* <Tech /> */}
-        {/* <Experience /> */}
+        <Hero />
+        <Counter />
+        <About />
+        <Offer />
+        <Tech />
+        <Experience />
+        {/* <Test/> */}
         <Work />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       <Footer />
     </>

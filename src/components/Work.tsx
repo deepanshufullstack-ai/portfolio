@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LuGithub } from "react-icons/lu";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -39,10 +39,27 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
     techStack: ["Nextjs", "Nodejs", "Nestjs"],
   },
+  {
+    id: 5,
+    title: "Nexus Analytics",
+    subTitle: "Featured Project",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
+    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+  },
+  {
+    id: 6,
+    title: "Nexus Analytics",
+    subTitle: "Featured Project",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
+    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+  },
 ];
 
 export default function Work() {
   const ref = useRef<HTMLDivElement>(null);
+  const [isActiveId, setIsActiveId] = useState(1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,26 +84,29 @@ export default function Work() {
           <div />
         </WorkHeadingContainer>
         <WorkContainer>
-          {projects.map((project) => (
-            <WorkCard key={project.id}>
-              <h2>{project.subTitle}</h2>
-              <h1>{project.title}</h1>
-              {/* <ul>
-                {project.techStack.map((tech) => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul> */}
-              <p>{project.description}</p>
-              <div>
-                <Link>
-                  <LuGithub className="icon" />
-                </Link>
-                <Link>
-                  <FiArrowUpRight className="icon" />
-                </Link>
-              </div>
-            </WorkCard>
-          ))}
+          {projects.map((project) => {
+            const isActive = isActiveId === project.id;
+            return (
+              <WorkCard
+                key={project.id}
+                $isActive={isActive}
+                onClick={() => setIsActiveId(project.id)}
+              >
+                <span className="project-index">0{project.id}</span>
+                <h2 className="project-subHeading">{project.subTitle}</h2>
+                <h1 className="project-heading">{project.title}</h1>
+                <p className="project-description">{project.description}</p>
+                <div className="link-container">
+                  <Link>
+                    <LuGithub className="icon" />
+                  </Link>
+                  <Link>
+                    <FiArrowUpRight className="icon" />
+                  </Link>
+                </div>
+              </WorkCard>
+            );
+          })}
         </WorkContainer>
       </WorkContent>
     </WorkSection>
@@ -160,24 +180,52 @@ export const WorkContainer = styled.div`
   width: 100%;
 `;
 
-export const WorkCard = styled.div`
-  border: 1px solid #23355499;
-  border-radius: 4px;
-  background-color: #0d1c37;
-  padding: 20px;
+export const WorkCard = styled.div<{ $isActive: boolean }>(
+  ({ $isActive }) =>
+    `
+  flex: ${$isActive ? "5" : "0.2"};
   height: 500px;
-  width: 100%;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #0d1c37;
+  border: 1px solid #23355499;
+  transition:
+    flex 0.5s ease,
+    transform 0.35s ease,
+    border 0.35s ease,
+    background-color 0.35s ease;
 
-  h1 {
-    line-height: 1;
-    font-size: 24px;
-    font-weight: 600;
-    font-family: var(--font-bricolage-grotesque);
-    margin-bottom: 20px;
+  &:hover {
+    transform: translateY(-8px);
+    border: 1px solid #64ffda;
   }
 
-  h2 {
+  .project-index {
+    color: #64ffda;
+    font-size: 14px;
+    font-weight: 50;
+    position: ${$isActive ? "none" : "absolute"};
+    top: ${$isActive ? "none" : "30px"};
+    left: ${$isActive ? "none" : "50%"};
+    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
+  }
+
+  .project-heading {
+    line-height: 1;
+    font-size: ${$isActive ? "24px" : "18px"};
+    font-weight: ${$isActive ? "500" : "200"};
+    font-family: var(--font-bricolage-grotesque);
+    margin-bottom: 20px;
+    white-space: nowrap;
+    transform: ${$isActive ? "rotate(0deg)" : "rotate(90deg)"};
+    margin-top: ${$isActive ? "0px" : "200px"}
+  }
+
+  .project-subHeading {
+    display: ${$isActive ? "block" : "none"};
     color: #64ffda;
     line-height: 1;
     font-size: 14px;
@@ -186,35 +234,24 @@ export const WorkCard = styled.div`
     margin-bottom: 10px;
   }
 
-  ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    li {
-      border: 1px solid #64ffda;
-      border-radius: 30px;
-      color: #64ffda;
-      font-size: 14px;
-      font-weight: 400;
-      padding: 4px 8px;
-    }
-  }
-
-  p {
+  .project-description {
     font-size: 14px;
     font-weight: 200;
+    display: ${$isActive ? "block" : "none"};
   }
 
-  div {
+  .link-container {
     display: flex;
+    flex-direction: ${$isActive ? "row" : "column"};
     align-items: center;
-    gap: 16px;
+    gap: ${$isActive ? "16px" : '14px'};
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: ${$isActive ? "20px" : "-30px"};
+    left: ${$isActive ? "20px" : "50%"};
+    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
   }
-`;
+`,
+);
 
 export const Link = styled.a`
   display: flex;
