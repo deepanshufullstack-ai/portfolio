@@ -20,7 +20,6 @@ export default function Home() {
         <Offer />
         <Tech />
         <Experience />
-        {/* <Test/> */}
         <Work />
         <Contact />
       </main>

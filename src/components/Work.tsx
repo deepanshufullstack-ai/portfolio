@@ -183,10 +183,10 @@ export default function Work() {
                   <div className="project-status">
                     <span>{project.status}</span>
                   </div>
-                  <span className="project-index">0{project.id}</span>
+                  
                   <h2 className="project-subHeading">{project.subtitle}</h2>
                   <h1 className="project-heading">{project.title}</h1>
-                  <ul >
+                  <ul className="tech-container">
                     {project.technologies.map((tech) => (
                       <li className="tech" key={tech}>
                         {tech}
@@ -202,10 +202,10 @@ export default function Work() {
                     ))}
                   </ul>
                   <div className="link-container">
-                    <Link>
+                    <Link href={project.githubLink} target="_blank">
                       <LuGithub className="icon" />
                     </Link>
-                    <Link>
+                    <Link href={project.liveLink} target="_blank">
                       <FiArrowUpRight className="icon" />
                     </Link>
                   </div>
@@ -285,142 +285,6 @@ export const WorkContainer = styled.div`
   gap: 10px;
   width: 100%;
 `;
-// export const WorkCard = styled.div<{ $isActive: boolean }>(
-//   ({ $isActive }) => `
-//     flex: ${$isActive ? "5" : "1"};
-//     height: 500px;
-//     position: relative;
-//     overflow: hidden;
-//     cursor: pointer;
-
-//     padding: 24px;
-//     border-radius: 12px;
-
-//     background: linear-gradient(
-//       180deg,
-//       rgba(13, 28, 55, 0.95) 0%,
-//       rgba(8, 17, 35, 1) 100%
-//     );
-
-//     border: 1px solid rgba(100, 255, 218, 0.12);
-
-//     box-shadow:
-//       0 10px 30px rgba(0, 0, 0, 0.25),
-//       inset 0 1px 0 rgba(255, 255, 255, 0.04);
-
-//     backdrop-filter: blur(10px);
-
-//     transition:
-//       flex 0.5s ease,
-//       transform 0.35s ease,
-//       box-shadow 0.35s ease,
-//       border-color 0.35s ease,
-//       background 0.35s ease;
-
-//     &:hover {
-//       flex: 5;
-//       transform: translateY(-8px);
-
-//       border-color: rgba(100, 255, 218, 0.4);
-
-//       box-shadow:
-//         0 20px 50px rgba(0, 0, 0, 0.45),
-//         0 0 30px rgba(100, 255, 218, 0.12);
-//     }
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       inset: 0;
-//       background: radial-gradient(
-//         circle at top right,
-//         rgba(100, 255, 218, 0.08),
-//         transparent 50%
-//       );
-//       pointer-events: none;
-//       opacity: 0;
-//       transition: opacity 0.4s ease;
-//     }
-
-//     &:hover::before {
-//       opacity: 1;
-//     }
-
-//     h1 {
-//       line-height: 1.1;
-//       font-size: 24px;
-//       font-weight: 600;
-//       font-family: var(--font-bricolage-grotesque);
-//       margin-bottom: 20px;
-//       color: #fff;
-//       transition: color 0.3s ease;
-//     }
-
-//     &:hover h1 {
-//       color: #64ffda;
-//     }
-
-//     h2 {
-//       color: #64ffda;
-//       line-height: 1;
-//       font-size: 14px;
-//       font-weight: 300;
-//       font-family: var(--font-bricolage-grotesque);
-//       margin-bottom: 12px;
-//       letter-spacing: 1px;
-//       text-transform: uppercase;
-//     }
-
-//     ul {
-//       display: flex;
-//       align-items: center;
-//       flex-wrap: wrap;
-//       gap: 12px;
-//       margin-bottom: 20px;
-
-//       li {
-//         border: 1px solid rgba(100, 255, 218, 0.4);
-//         border-radius: 999px;
-//         color: #64ffda;
-//         font-size: 13px;
-//         font-weight: 500;
-//         padding: 6px 12px;
-//         background: rgba(100, 255, 218, 0.05);
-
-//         transition:
-//           transform 0.3s ease,
-//           background 0.3s ease;
-//       }
-
-//       li:hover {
-//         transform: translateY(-2px);
-//         background: rgba(100, 255, 218, 0.12);
-//       }
-//     }
-
-//     p {
-//       font-size: 14px;
-//       line-height: 1.7;
-//       font-weight: 300;
-//       color: rgba(255, 255, 255, 0.8);
-//     }
-
-//     div {
-//       display: flex;
-//       align-items: center;
-//       gap: 16px;
-//       position: absolute;
-//       bottom: 24px;
-//       left: 24px;
-
-//       transition: transform 0.3s ease;
-//     }
-
-//     &:hover div {
-//       transform: translateX(6px);
-//     }
-//   `
-// );
 
 export const WorkCard = styled.div<{ $isActive: boolean }>(
   ({ $isActive }) =>
@@ -458,10 +322,10 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
 
   .project-content {
     height: 100%;
-    display: flex;
+    display: ${$isActive ? "flex" : "none"};
     flex-direction: column;
     position: relative;
-    padding: 20px 0px;
+    padding: 10px 0px;
   }
 
   .project-status {
@@ -477,19 +341,7 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
     font-family: var(--font-bricolage-grotesque);
   }
 
-  .project-index {
-    color: #64ffda;
-    font-size: 14px;
-    font-weight: 50;
-    display: ${$isActive ? "none" : "block"};
-    position: ${$isActive ? "none" : "absolute"};
-    top: ${$isActive ? "none" : "30px"};
-    left: ${$isActive ? "none" : "50%"};
-    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
-  }
-
   .project-subHeading {
-    display: ${$isActive ? "block" : "none"};
     color: #64ffda;
     line-height: 1;
     font-size: 14px;
@@ -500,26 +352,37 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
 
   .project-heading {
     line-height: 1;
-    font-size: ${$isActive ? "24px" : "18px"};
-    font-weight: ${$isActive ? "500" : "200"};
+    font-size: 24px;
+    font-weight: 500;
     font-family: var(--font-bricolage-grotesque);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     white-space: nowrap;
-    transform: ${$isActive ? "rotate(0deg)" : "rotate(90deg)"};
-    margin-top: ${$isActive ? "0px" : "200px"}
+  }
+
+  .tech-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tech {
+    font-size: 12px;
+    font-weight: 200;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #153446;
+    color: #64ffda;
   }
 
   .project-description {
     color: #8892b0;
     font-size: 14px;
-    display: ${$isActive ? "block" : "none"};
+    margin-bottom: 20px;
   }
 
   .highlights-container {
-    display: ${$isActive ? "block" : "none"};
     list-style-type: disc;
     padding-left: 20px;
-    margin-top: 20px;
   }
 
   .highlights {
@@ -530,15 +393,12 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
 
   .link-container {
     display: flex;
-    flex-direction: ${$isActive ? "row" : "column"};
     align-items: center;
-    gap: ${$isActive ? "16px" : "14px"};
+    gap: 10px;
     position: absolute;
-    bottom: ${$isActive ? "20px" : "-30px"};
-    left: ${$isActive ? "0px" : "50%"};
-    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
+    bottom: 20px;
+    left: 0px;
   }
-
 `,
 );
 
