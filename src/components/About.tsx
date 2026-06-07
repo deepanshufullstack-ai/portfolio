@@ -1,6 +1,7 @@
 "use client";
 
-import { MapPin } from "lucide-react";
+import theme from "@/style/theme/theme";
+import { Briefcase, Globe, GraduationCap, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
@@ -32,36 +33,39 @@ export default function About() {
         <AboutContentContainer>
           <AboutContentSubContainer>
             <p className="paragraph">
-              Hello! My name is Alex and I enjoy creating things that live on
-              the internet. My interest in web development started back in 2012
-              when I decided to try editing custom themes — turns out hacking
-              together HTML & CSS taught me a lot about design and structure.
+              I'm a passionate Frontend Developer who enjoys creating modern,
+              responsive, and user-friendly web applications. I specialize in
+              turning <span>ideas</span> and <span>designs</span> into
+              <span>interactive digital experiences </span>
+              using technologies like HTML, CSS, JavaScript, React, and modern
+              frontend tools. I focus on writing clean, maintainable code while
+              ensuring <span>performance, accessibility,</span> and a{" "}
+              <span>seamless user experience</span> across all devices.
             </p>
             <p className="paragraph">
-              Fast-forward to today, and Ive had the privilege of working at an
-              <span> advertising agency</span> , a <span> start-up</span>, a
-              <span> huge corporation</span>, and a
-              <span> student-led design studio</span> . My main focus these days
-              is building accessible, inclusive products and digital
-              experiences.
+              I continuously explore new technologies and best practices to
+              improve my skills and build better products. My goal is to develop
+              <span> web solutions</span> that not only look great but also
+              provide <span>real value to users</span> through intuitive and
+              engaging interfaces.
             </p>
-            <p className="paragraph">Here are a few things I value:</p>
+            <p className="paragraph" style={{marginTop: '20px'}}>Here are a few things I value:</p>
             <AboutContentValuesGrid>
               <GridItem>
                 <MapPin color="#64ffda" size={16} />
-                <h1>San Francisco, CA</h1>
+                <h1>Ratlam, Madhya Pradesh</h1>
               </GridItem>
               <GridItem>
-                <MapPin color="#64ffda" size={16} />
-                <h1>San Francisco, CA</h1>
+                <Briefcase color="#64ffda" size={16} />
+                <h1>Available for Hire</h1>
               </GridItem>
               <GridItem>
-                <MapPin color="#64ffda" size={16} />
-                <h1>San Francisco, CA</h1>
+                <GraduationCap color="#64ffda" size={16} />
+                <h1>B.E. Computer Science</h1>
               </GridItem>
               <GridItem>
-                <MapPin color="#64ffda" size={16} />
-                <h1>San Francisco, CA</h1>
+                <Globe color="#64ffda" size={16} />
+                <h1>Remote Ready</h1>
               </GridItem>
             </AboutContentValuesGrid>
           </AboutContentSubContainer>
@@ -87,7 +91,7 @@ export const AboutSection = styled.section`
 export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 64px;
   width: 70%;
 
   @media (max-width: 768px) {
@@ -102,7 +106,7 @@ export const AboutHeadingContainer = styled.div`
   gap: 20px;
 
   span {
-    color: #64ffda;
+    color: ${theme.colors.primary};
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
@@ -113,7 +117,7 @@ export const AboutHeadingContainer = styled.div`
   }
 
   h1 {
-    color: #ccd6f6;
+    color: ${theme.colors.text.heading};
     font-size: 36px;
     font-weight: 700;
     font-family: var(--font-bricolage-grotesque);
@@ -151,12 +155,12 @@ export const AboutContentSubContainer = styled.div`
   gap: 20px;
 
   .paragraph {
-    color: #8892b0;
+    color: ${theme.colors.text.description};
     font-size: 17px;
     font-family: var(--font-bricolage-grotesque);
 
     span {
-      color: #64ffda;
+      color: ${theme.colors.primary};
     }
   }
 
@@ -171,7 +175,7 @@ export const AboutContentImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #64ffda;
+  border: 1px solid ${theme.colors.primary};
   border-radius: 4px;
 
   @media (max-width: 768px) {
@@ -184,7 +188,7 @@ export const AboutContentValuesGrid = styled.div`
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
 
   @media (max-width: 768px) {
     display: grid;
@@ -199,6 +203,6 @@ export const GridItem = styled.div`
 
   h1 {
     font-size: 14px;
-    color: #e5e7eb;
+    color: ${theme.colors.text.heading};
   }
 `;
