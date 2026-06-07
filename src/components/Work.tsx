@@ -9,51 +9,134 @@ import styled from "styled-components";
 const projects = [
   {
     id: 1,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "TaskFlow",
+    subtitle: "Project Management Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "A full-stack project management application with task tracking, team collaboration, role-based access, and analytics dashboard.",
+    githubLink: "https://github.com/yourusername/taskflow",
+    liveLink: "https://taskflow.vercel.app",
+    image: "/projects/taskflow.png",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    category: "Web Application",
+    status: "Completed",
+    year: 2025,
+    featured: true,
+    highlights: [
+      "Kanban board",
+      "Team collaboration",
+      "Real-time updates",
+      "Analytics dashboard",
+    ],
   },
+
   {
     id: 2,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "AI Resume Builder",
+    subtitle: "Smart Resume Generation Tool",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "An AI-powered resume builder that creates professional resumes tailored to specific job descriptions.",
+    githubLink: "https://github.com/yourusername/ai-resume-builder",
+    liveLink: "https://ai-resume-builder.vercel.app",
+    image: "/projects/resume-builder.png",
+    technologies: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
+    category: "AI Application",
+    status: "Completed",
+    year: 2025,
+    featured: true,
+    highlights: [
+      "AI-generated content",
+      "PDF export",
+      "Multiple templates",
+      "Job optimization",
+    ],
   },
+
   {
     id: 3,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "ShopSphere",
+    subtitle: "Modern E-Commerce Store",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "A scalable e-commerce platform featuring product search, cart management, secure payments, and order tracking.",
+    githubLink: "https://github.com/yourusername/shopsphere",
+    liveLink: "https://shopsphere.vercel.app",
+    image: "/projects/shopsphere.png",
+    technologies: ["Next.js", "Redux", "Stripe", "MongoDB"],
+    category: "E-Commerce",
+    status: "Completed",
+    year: 2024,
+    featured: true,
+    highlights: [
+      "Stripe integration",
+      "Product filtering",
+      "Order management",
+      "Responsive design",
+    ],
   },
+
   {
     id: 4,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "DevConnect",
+    subtitle: "Developer Social Network",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "A social platform where developers can share posts, connect with peers, and showcase their projects.",
+    githubLink: "https://github.com/yourusername/devconnect",
+    liveLink: "https://devconnect.vercel.app",
+    image: "/projects/devconnect.png",
+    technologies: ["React", "Firebase", "Tailwind CSS", "Node.js"],
+    category: "Social Platform",
+    status: "Completed",
+    year: 2024,
+    featured: false,
+    highlights: [
+      "User profiles",
+      "Post interactions",
+      "Real-time chat",
+      "Project showcase",
+    ],
   },
+
   {
     id: 5,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "Finance Tracker",
+    subtitle: "Personal Expense Management",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "A finance management application that helps users track expenses, manage budgets, and visualize spending habits.",
+    githubLink: "https://github.com/yourusername/finance-tracker",
+    liveLink: "https://finance-tracker.vercel.app",
+    image: "/projects/finance-tracker.png",
+    technologies: ["React", "Chart.js", "Node.js", "PostgreSQL"],
+    category: "Finance",
+    status: "Completed",
+    year: 2024,
+    featured: false,
+    highlights: [
+      "Expense tracking",
+      "Budget planning",
+      "Interactive charts",
+      "Monthly reports",
+    ],
   },
+
   {
     id: 6,
-    title: "Nexus Analytics",
-    subTitle: "Featured Project",
+    title: "WeatherVision",
+    subtitle: "Real-Time Weather Dashboard",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nesciunt quis optio id, vitae pariatur eligendi facilis nam iure voluptates.",
-    techStack: ["Nextjs", "Nodejs", "Nestjs"],
+      "A weather forecasting application providing real-time weather updates, forecasts, and location-based insights.",
+    githubLink: "https://github.com/yourusername/weathervision",
+    liveLink: "https://weathervision.vercel.app",
+    image: "/projects/weathervision.png",
+    technologies: ["React", "OpenWeather API", "Tailwind CSS"],
+    category: "Utility App",
+    status: "Completed",
+    year: 2023,
+    featured: false,
+    highlights: [
+      "Live weather data",
+      "7-day forecast",
+      "Location detection",
+      "Clean UI",
+    ],
   },
 ];
 
@@ -92,22 +175,40 @@ export default function Work() {
                 $isActive={isActive}
                 onClick={() => setIsActiveId(project.id)}
               >
-                <span className="project-index">0{project.id}</span>
-                <h2 className="project-subHeading">{project.subTitle}</h2>
-                <h1 className="project-heading">{project.title}</h1>
-                <p className="project-description">{project.description}</p>
-                <ul className="tech-container">
-                  {project.techStack.map((tech) => (
-                    <li className="tech" key={tech}>{tech}</li>
-                  ))}
-                </ul>
-                <div className="link-container">
-                  <Link>
-                    <LuGithub className="icon" />
-                  </Link>
-                  <Link>
-                    <FiArrowUpRight className="icon" />
-                  </Link>
+                {/* project image */}
+                <img src="../project.jpg" className="project-image" />
+
+                {/* project content */}
+                <div className="project-content">
+                  <div className="project-status">
+                    <span>{project.status}</span>
+                  </div>
+                  <span className="project-index">0{project.id}</span>
+                  <h2 className="project-subHeading">{project.subtitle}</h2>
+                  <h1 className="project-heading">{project.title}</h1>
+                  <ul >
+                    {project.technologies.map((tech) => (
+                      <li className="tech" key={tech}>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="project-description">{project.description}</p>
+                  <ul className="highlights-container">
+                    {project.highlights.map((highlight) => (
+                      <li className="highlights" key={highlight}>
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="link-container">
+                    <Link>
+                      <LuGithub className="icon" />
+                    </Link>
+                    <Link>
+                      <FiArrowUpRight className="icon" />
+                    </Link>
+                  </div>
                 </div>
               </WorkCard>
             );
@@ -324,15 +425,18 @@ export const WorkContainer = styled.div`
 export const WorkCard = styled.div<{ $isActive: boolean }>(
   ({ $isActive }) =>
     `
-  flex: ${$isActive ? "5" : "0.2"};
   height: 500px;
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #23355499;
+  background-color: #0d1c37;
   overflow: hidden;
   cursor: pointer;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #0d1c37;
-  border: 1px solid #23355499;
+  flex: ${$isActive ? "5" : "0.2"};
   transition:
     flex 0.5s ease,
     transform 0.35s ease,
@@ -344,15 +448,54 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
     border: 1px solid #64ffdb;
   }
 
+  .project-image {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+  }
+
+  .project-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0px;
+  }
+
+  .project-status {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #153446;
+    color: #64ffda;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-bricolage-grotesque);
+  }
+
   .project-index {
     color: #64ffda;
     font-size: 14px;
     font-weight: 50;
-    display: ${$isActive ? 'none' : 'block'};
+    display: ${$isActive ? "none" : "block"};
     position: ${$isActive ? "none" : "absolute"};
     top: ${$isActive ? "none" : "30px"};
     left: ${$isActive ? "none" : "50%"};
     transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
+  }
+
+  .project-subHeading {
+    display: ${$isActive ? "block" : "none"};
+    color: #64ffda;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: var(--font-bricolage-grotesque);
+    margin-bottom: 10px;
   }
 
   .project-heading {
@@ -366,44 +509,36 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
     margin-top: ${$isActive ? "0px" : "200px"}
   }
 
-  .project-subHeading {
-    display: ${$isActive ? "block" : "none"};
-    color: #64ffda;
-    line-height: 1;
-    font-size: 14px;
-    font-weight: 200;
-    font-family: var(--font-bricolage-grotesque);
-    margin-bottom: 10px;
-  }
-
   .project-description {
+    color: #8892b0;
     font-size: 14px;
-    font-weight: 200;
     display: ${$isActive ? "block" : "none"};
   }
 
-  .link-container {
-    display: flex;
-    flex-direction: ${$isActive ? "row" : "column"};
-    align-items: center;
-    gap: ${$isActive ? "16px" : '14px'};
-    position: absolute;
-    bottom: ${$isActive ? "20px" : "-30px"};
-    left: ${$isActive ? "20px" : "50%"};
-    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
-  }
-
-  .tech-container {
+  .highlights-container {
     display: ${$isActive ? "block" : "none"};
     list-style-type: disc;
     padding-left: 20px;
     margin-top: 20px;
   }
 
-  .tech {
+  .highlights {
+    color: #8892b0;
     font-size: 14px;
     line-height: 1.5;
   }
+
+  .link-container {
+    display: flex;
+    flex-direction: ${$isActive ? "row" : "column"};
+    align-items: center;
+    gap: ${$isActive ? "16px" : "14px"};
+    position: absolute;
+    bottom: ${$isActive ? "20px" : "-30px"};
+    left: ${$isActive ? "0px" : "50%"};
+    transform: ${$isActive ? "none" : "translate(-50%, -50%)"};
+  }
+
 `,
 );
 
