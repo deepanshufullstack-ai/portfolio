@@ -1,3 +1,4 @@
+import theme from "@/style/theme/theme";
 import { ArrowRight } from "lucide-react";
 import styled from "styled-components";
 
@@ -7,17 +8,18 @@ export default function Hero() {
       <HeroContent>
         <HeroIntro>Hi, my name is</HeroIntro>
         <HeroHeading>Deepanshu.</HeroHeading>
-        <HeroSubHeading>I build things for the web.</HeroSubHeading>
+        <HeroSubHeading>Creating User-Centered <span>Solutions.</span></HeroSubHeading>
         <HeroDescription>
-          Im a frontend developer specializing in building exceptional digital
-          experiences. Currently, Im focused on crafting accessible,
-          human-centered products with modern web technologies.
+          I build modern, responsive web applications that prioritize usability,
+          performance, and accessibility. Focused on creating intuitive
+          interfaces that solve real-world problems and deliver seamless user
+          experiences.
         </HeroDescription>
         <HeroBtnContainer>
-          <CheckoutMyWorkBtn>
+          <CheckoutMyWorkBtn href="#work">
             Check out my work <ArrowRight color="#0a1929" size={16} />
           </CheckoutMyWorkBtn>
-          <ContactMeBtn>Contact me</ContactMeBtn>
+          <ContactMeBtn href="#contact">Contact me</ContactMeBtn>
         </HeroBtnContainer>
       </HeroContent>
     </HeroSection>
@@ -48,7 +50,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroIntro = styled.span`
-  color: #64ffda;
+  color: ${theme.colors.primary};
   text-transform: uppercase;
   font-size: 15px;
   line-height: 1;
@@ -61,11 +63,14 @@ export const HeroIntro = styled.span`
 `;
 
 export const HeroHeading = styled.h1`
-  color: #ccd6f6;
+  color: ${theme.colors.text.heading};
   font-size: 88px;
   font-weight: 700;
   font-family: var(--font-bricolage-grotesque);
   line-height: 1.1;
+  letter-spacing: -4px;
+  margin-left: -4px;
+
 
   @media (max-width: 768px) {
     font-size: 48px;
@@ -73,12 +78,18 @@ export const HeroHeading = styled.h1`
 `;
 
 export const HeroSubHeading = styled.h2`
-  color: #a8b2d1b3;
+  color: ${theme.colors.text.subHeading};
   font-size: 76px;
   font-weight: 700;
   font-family: var(--font-bricolage-grotesque);
   line-height: 1.1;
   margin-bottom: 16px;
+  margin-left: -2px;
+  letter-spacing: -4px;
+
+  span {
+    color: ${theme.colors.primary};
+  }
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -86,11 +97,11 @@ export const HeroSubHeading = styled.h2`
 `;
 
 export const HeroDescription = styled.p`
-  color: #8892b0;
+  color: ${theme.colors.text.description};
   font-size: 18px;
   font-family: var(--font-bricolage-grotesque);
   line-height: 1.5;
-  max-width: 600px;
+  max-width: 660px;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -104,9 +115,9 @@ export const HeroBtnContainer = styled.div`
   gap: 20px;
 `;
 
-export const CheckoutMyWorkBtn = styled.button`
-  background-color: #64ffda;
-  color: #0a1929;
+export const CheckoutMyWorkBtn = styled.a`
+  background-color: ${theme.colors.primary};
+  color: ${theme.colors.background};
   font-size: 14px;
   font-weight: 600;
   padding: 14px 28px;
@@ -124,12 +135,12 @@ export const CheckoutMyWorkBtn = styled.button`
   }
 `;
 
-export const ContactMeBtn = styled.button`
-  color: #64ffda;
+export const ContactMeBtn = styled.a`
+  color: ${theme.colors.primary};
   font-size: 14px;
   font-weight: 500;
   padding: 14px 28px;
-  border: 1px solid #64ffda;
+  border: 1px solid ${theme.colors.primary};
   border-radius: 30px;
   cursor: pointer;
   transition:
