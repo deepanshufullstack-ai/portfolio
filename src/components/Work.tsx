@@ -322,6 +322,7 @@ export const WorkCard = styled.div<{ $isActive: boolean }>(
 
   .project-content {
     height: 100%;
+    width: 100%;
     display: ${$isActive ? "flex" : "none"};
     flex-direction: column;
     position: relative;

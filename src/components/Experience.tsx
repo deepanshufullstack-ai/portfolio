@@ -5,25 +5,25 @@ import styled from "styled-components";
 
 const experiences = [
   {
-    year: "Apr 2025 - Present",
+    year: "Apr 2025 — Present",
     title: "Junior Software Engineer",
     company: "Kriotek Pvt Ltd",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+      "Junior Software Engineer with experience in developing and maintaining web applications, building responsive user interfaces, and collaborating with cross-functional teams to deliver scalable software solutions. Skilled in writing clean, maintainable code and working with modern front-end and backend technologies.",
   },
   {
-    year: "Apr 2025 - Present",
-    title: "Junior Software Engineer",
+    year: "Aug 2024 — Mar 2025",
+    title: "React Developer Trainee",
     company: "Kriotek Pvt Ltd",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+      "React Developer Trainee with hands-on experience in building responsive web interfaces and learning modern front-end development practices using React and JavaScript. Familiar with component-based architecture, API integration, and creating user-friendly web applications",
   },
   {
-    year: "Apr 2025 - Present",
-    title: "Junior Software Engineer",
-    company: "Kriotek Pvt Ltd",
+    year: "Mar 2023 — Sep 2023",
+    title: "WordPress Developer",
+    company: "Web Indore IT Solutions",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid, at libero sint deleniti magnam dignissimos animi suscipit aliquam velit esse neque nam voluptas id fugiat nostrum voluptatum nemo, voluptatibus nisi? Molestias velit praesentium suscipit!",
+      "WordPress Developer with experience in building and customizing responsive websites using WordPress. Skilled in theme customization, plugin integration, and creating user-friendly website layouts for business and client requirements.",
   },
 ];
 
@@ -59,18 +59,13 @@ export default function Experience() {
               <ExperienceItemPointer>
                 <div />
               </ExperienceItemPointer>
-              <ExperienceItemDate>Apr 2025 - Present</ExperienceItemDate>
+              <ExperienceItemDate>{exp.year}</ExperienceItemDate>
               <ExperienceItemHeadingContainer>
-                <h1>Junior Software Engineer</h1>
-                <h2>Kriotek Pvt Ltd</h2>
+                <h1>{exp.title}</h1>
+                <h2>{exp.company}</h2>
               </ExperienceItemHeadingContainer>
               <ExperienceItemDescription>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, dignissimos ipsa. Illo aspernatur delectus aliquid,
-                at libero sint deleniti magnam dignissimos animi suscipit
-                aliquam velit esse neque nam voluptas id fugiat nostrum
-                voluptatum nemo, voluptatibus nisi? Molestias velit praesentium
-                suscipit!
+                {exp.description}
               </ExperienceItemDescription>
             </ExperienceItem>
           ))}

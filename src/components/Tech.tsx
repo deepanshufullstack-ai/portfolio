@@ -1,60 +1,65 @@
 
 import { FaReact } from "react-icons/fa";
-import { RiNextjsLine } from "react-icons/ri";
+import { RiNextjsFill, RiNextjsLine } from "react-icons/ri";
 import { RiJavascriptLine } from "react-icons/ri";
 
 import { SiTypescript } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
+import { FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa6";
 import { SiNestjs } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 import styled from "styled-components";
+import { DiJavascript, DiMongodb } from "react-icons/di";
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 
 const techs = [
   {
-    name: "JavaScript",
+    name: "HTML",
     description:
-      "A programming language that is one of the core technologies of the web.",
-    icon: <RiJavascriptLine color="#64ffda" size={22} />,
+      "The standard markup language used to structure and organize content on web pages.",
+    icon: <FaHtml5 color="#64ffda" size={22} />,
   },
   {
-    name: "TypeScript",
+    name: "CSS",
     description:
-      "A strongly typed programming language that builds on JavaScript.",
-    icon: <SiTypescript color="#64ffda" size={22} />,
+      "A stylesheet language used to design, style, and create responsive layouts for web applications.",
+    icon: <FaCss3Alt color="#64ffda" size={22} />,
+  },
+  {
+    name: "JavaScript",
+    description:
+      "A versatile programming language that powers interactive and dynamic behavior in web applications.",
+    icon: <DiJavascript color="#64ffda" size={22} />,
   },
   {
     name: "React.js",
-    description: "A JavaScript library for building user interfaces.",
-    icon: <FaReact color="#64ffda" size={22} />,
+    description:
+      "A popular JavaScript library for building fast, component-based user interfaces and single-page applications.",
+    icon: <FaReact  color="#64ffda" size={22} />,
   },
   {
     name: "Next.js",
     description:
-      "A React framework for building server-side rendered applications.",
-    icon: <RiNextjsLine color="#64ffda" size={22} />,
-  },
-  {
-    name: "Node.js",
-    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
-    icon: <FaNodeJs color="#64ffda" size={22} />,
+      "A React framework that provides server-side rendering, static site generation, routing, and full-stack capabilities.",
+    icon: <RiNextjsFill color="#64ffda" size={22} />,
   },
   {
     name: "Nest.js",
     description:
-      "A progressive Node.js framework for building efficient and scalable server-side applications.",
+      "A progressive Node.js framework built with TypeScript for creating scalable, maintainable, and enterprise-grade backend applications.",
     icon: <SiNestjs color="#64ffda" size={22} />,
   },
   {
     name: "MongoDB",
     description:
-      "A general-purpose, document-based, distributed database program.",
-    icon: <SiMongodb color="#64ffda" size={22} />,
+      "A NoSQL document database that stores data in flexible JSON-like documents for scalable applications.",
+    icon: <DiMongodb color="#64ffda" size={22} />,
   },
   {
     name: "PostgreSQL",
-    description: "A powerful, open-source object-relational database system.",
-    icon: <SiPostgresql color="#64ffda" size={22} />,
+    description:
+      "A powerful open-source relational database known for reliability, performance, and advanced SQL features.",
+    icon: <BiLogoPostgresql color="#64ffda" size={22} />,
   },
 ];
 
@@ -97,7 +102,7 @@ export const TechSection = styled.section`
 export const TechContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 64px;
   width: 70%;
 
   @media (max-width: 768px) {
@@ -158,7 +163,7 @@ export const TechItem = styled.div`
   gap: 12px;
   padding: 20px;
   border: 1px solid #23355499;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: #0d1c37;
   transition:
     transform 0.3s ease,
@@ -171,7 +176,7 @@ export const TechItem = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #153446;
-    border-radius: 8px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
     margin-bottom: 16px;
   }

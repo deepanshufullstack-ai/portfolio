@@ -18,12 +18,12 @@ export default function Home() {
         <Counter />
         <About />
         <Services />
-        {/* <Tech /> */}
-        {/* <Experience /> */}
+        <Tech />
+        <Experience />
         {/* <Work /> */}
-        {/* <Contact /> */}
+        <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

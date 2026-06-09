@@ -1,13 +1,21 @@
 "use client";
 
 import { BsCloudUpload } from "react-icons/bs";
+import { LuCode, LuMonitor } from "react-icons/lu";
+import { LuSettings } from "react-icons/lu";
+import { LuLayers } from "react-icons/lu";
+import { LuDatabase } from "react-icons/lu";
+
+
+
+
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const services = [
   {
     title: "Frontend Development",
-    // icon: <Monitor color="#64ffda" size={24} />,
+    icon: <LuMonitor color="#64ffda" size={24} />,
     description:
       "Building responsive, interactive, and visually appealing user interfaces that deliver seamless experiences across all devices.",
     techStack: [
@@ -18,12 +26,11 @@ const services = [
       "React",
       "Next.js",
       "Tailwind CSS",
-      "Bootstrap",
     ],
   },
   {
     title: "Backend Development",
-    // icon: <Layers color="#64ffda" size={24} />,
+    icon: <LuSettings color="#64ffda" size={24} />,
     description:
       "Developing secure, scalable, and efficient server-side applications, APIs, and business logic for modern web platforms.",
     techStack: [
@@ -37,7 +44,7 @@ const services = [
   },
   {
     title: "Full-Stack Development",
-    // icon: <Layers color="#64ffda" size={24} />,
+    icon: <LuLayers color="#64ffda" size={24} />,
     description:
       "Creating end-to-end web applications by seamlessly integrating frontend interfaces with robust backend systems.",
     techStack: [
@@ -51,7 +58,7 @@ const services = [
   },
   {
     title: "Database Management",
-    // icon: <Database color="#64ffda" size={24} />,
+    icon: <LuDatabase color="#64ffda" size={24} />,
     description:
       "Designing, managing, and optimizing databases to ensure data integrity, scalability, and high performance.",
     techStack: [
@@ -63,7 +70,7 @@ const services = [
   },
   {
     title: "API Development & Integration",
-    // icon: <Layers color="#64ffda" size={24} />,
+    icon: <LuCode color="#64ffda" size={24} />,
     description:
       "Building RESTful APIs and integrating third-party services to enhance application functionality and connectivity.",
     techStack: [
@@ -76,7 +83,7 @@ const services = [
   },
   {
     title: "Cloud Deployment",
-    // icon: <BsCloudUpload color="#64ffda" size={24} />,
+    icon: <BsCloudUpload color="#64ffda" size={24} />,
     description:
       "Deploying, managing, and maintaining web applications using modern cloud platforms and CI/CD workflows.",
     techStack: [
@@ -120,7 +127,7 @@ export default function Services() {
             <OfferItem key={i}>
               <span>0{i + 1}</span>
               <div>
-                {/* {service.icon} */}
+                {service.icon}
               </div>
               <h1>{service.title}</h1>
               <p>{service.description}</p>
@@ -152,7 +159,7 @@ export const OfferSection = styled.section`
 export const OfferContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 64px;
   width: 70%;
 
   @media (max-width: 768px) {
@@ -199,7 +206,7 @@ export const OfferLine = styled.div`
 export const OfferGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
@@ -207,12 +214,13 @@ export const OfferGrid = styled.div`
 `;
 
 export const OfferItem = styled.div`
+  height: 400px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 20px;
   border: 1px solid #23355499;
-  border-radius: 0px;
+  border-radius: 4px;
   background-color: #0d1c37;
   position: relative;
   transition:
@@ -242,10 +250,10 @@ export const OfferItem = styled.div`
     font-family: var(--font-bricolage-grotesque);
     font-size: 120px;
     font-weight: 700;
-    line-height: 0.8;
+    line-height: 0.7;
     position: absolute;
-    top: 6px;
-    right: 6px;
+    bottom: 20px;
+    right: 20px;
     opacity: 0.1;
   }
 
