@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 const navLinks = [
   { menu: "About", href: "#about" },
+  {menu: "Services", href: "#services"},
   { menu: "Experience", href: "#experience" },
   { menu: "Work", href: "#work" },
   { menu: "Contact", href: "#contact" },

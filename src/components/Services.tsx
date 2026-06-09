@@ -1,49 +1,114 @@
+"use client";
 
-import { RiComputerLine } from "react-icons/ri";
+import { BsCloudUpload } from "react-icons/bs";
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
-const offers = [
+const services = [
   {
     title: "Frontend Development",
+    // icon: <Monitor color="#64ffda" size={24} />,
     description:
-      "Building responsive and interactive user interfaces with modern web technologies.",
-    skills: ["React", "Vue.js", "Angular"],
+      "Building responsive, interactive, and visually appealing user interfaces that deliver seamless experiences across all devices.",
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
   },
   {
     title: "Backend Development",
+    // icon: <Layers color="#64ffda" size={24} />,
     description:
-      "Developing scalable and maintainable server-side applications with modern technologies.",
-    skills: ["Node.js", "Python", "Java"],
+      "Developing secure, scalable, and efficient server-side applications, APIs, and business logic for modern web platforms.",
+    techStack: [
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "JWT",
+      "Socket.io",
+      "MongoDB",
+    ],
   },
   {
-    title: "UI/UX Design",
+    title: "Full-Stack Development",
+    // icon: <Layers color="#64ffda" size={24} />,
     description:
-      "Creating user-centered designs that are both visually appealing and easy to use.",
-    skills: ["Figma", "Adobe XD", "Sketch"],
+      "Creating end-to-end web applications by seamlessly integrating frontend interfaces with robust backend systems.",
+    techStack: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MySQL",
+    ],
   },
   {
-    title: "Frontend Development",
+    title: "Database Management",
+    // icon: <Database color="#64ffda" size={24} />,
     description:
-      "Building responsive and interactive user interfaces with modern web technologies.",
-    skills: ["React", "Vue.js", "Angular"],
+      "Designing, managing, and optimizing databases to ensure data integrity, scalability, and high performance.",
+    techStack: [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "Firebase",
+    ],
   },
   {
-    title: "Backend Development",
+    title: "API Development & Integration",
+    // icon: <Layers color="#64ffda" size={24} />,
     description:
-      "Developing scalable and maintainable server-side applications with modern technologies.",
-    skills: ["Node.js", "Python", "Java"],
+      "Building RESTful APIs and integrating third-party services to enhance application functionality and connectivity.",
+    techStack: [
+      "REST API",
+      "Express.js",
+      "Postman",
+      "Axios",
+      "JWT",
+    ],
   },
   {
-    title: "UI/UX Design",
+    title: "Cloud Deployment",
+    // icon: <BsCloudUpload color="#64ffda" size={24} />,
     description:
-      "Creating user-centered designs that are both visually appealing and easy to use.",
-    skills: ["Figma", "Adobe XD", "Sketch"],
+      "Deploying, managing, and maintaining web applications using modern cloud platforms and CI/CD workflows.",
+    techStack: [
+      "Vercel",
+      "Netlify",
+      "Render",
+      "AWS",
+      "Docker",
+      "GitHub Actions",
+    ],
   },
 ];
 
-export default function Offer() {
+export default function Services() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          ref.current?.querySelectorAll(".reveal").forEach((el, i) => {
+            setTimeout(() => el.classList.add("visible"), i * 100);
+          });
+        }
+      },
+      { threshold: 0.1 },
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <OfferSection>
+    <OfferSection id="services" ref={ref}>
       <OfferContent>
         <OfferHeadingContainer>
           <OfferIntro>03.</OfferIntro>
@@ -51,16 +116,16 @@ export default function Offer() {
           <OfferLine />
         </OfferHeadingContainer>
         <OfferGrid>
-          {offers.map((offer, i) => (
+          {services.map((service, i) => (
             <OfferItem key={i}>
               <span>0{i + 1}</span>
               <div>
-                <RiComputerLine color="#64ffda" size={24} />
+                {/* {service.icon} */}
               </div>
-              <h1>{offer.title}</h1>
-              <p>{offer.description}</p>
+              <h1>{service.title}</h1>
+              <p>{service.description}</p>
               <ul>
-                {offer.skills.map((skill, j) => (
+                {service.techStack.map((skill, j) => (
                   <li key={j}>{skill}</li>
                 ))}
               </ul>
@@ -71,7 +136,6 @@ export default function Offer() {
     </OfferSection>
   );
 }
-
 
 export const OfferSection = styled.section`
   min-height: 100vh;

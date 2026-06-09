@@ -5,19 +5,19 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Offer from "@/components/Offer";
+import Services from "@/components/Services";
 import Tech from "@/components/Tech";
 import Work from "@/components/Work";
 
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <main>
         <Hero />
-        {/* <Counter /> */}
+        <Counter />
         <About />
-        {/* <Offer /> */}
+        <Services />
         {/* <Tech /> */}
         {/* <Experience /> */}
         {/* <Work /> */}

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const counters = [
-  { count: "5+", label: "Years of Experience" },
-  { count: "20+", label: "Projects Completed" },
+  { count: "2+", label: "Years of Experience" },
+  { count: "10+", label: "Projects Completed" },
   { count: "10+", label: "Happy Clients" },
-  { count: "3", label: "Awards Won" },
+  { count: "4", label: "Awards Won" },
 ];
 
 export default function Counter() {
@@ -60,7 +60,7 @@ export const AutoCounter = styled.div`
   p {
     color: #0b1b31;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
   }
 
