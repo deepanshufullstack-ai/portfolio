@@ -5,11 +5,18 @@ import { LuLinkedin } from "react-icons/lu";
 import { LuTwitter } from "react-icons/lu";
 
 import { Mail, MapPin, Send } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,6 +32,47 @@ export default function Contact() {
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
+
+    const data = await response.json();
+
+    alert(data.message);
+    setLoading(false);
+    if (data.success) {
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
+  }
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <ContactSection id="contact" ref={ref}>
       <ContactContent>
@@ -69,7 +117,7 @@ export default function Contact() {
           </SubConnectBtnContainer>
         </ContactInfo>
         <FormContainer>
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
             <FormInputContainer>
               <FormLabel htmlFor="">your name</FormLabel>
               <FormInput
@@ -77,28 +125,35 @@ export default function Contact() {
                 name="name"
                 id="name"
                 placeholder="John Doe"
+                value={formData.name}
+                onChange={handleChange}
               />
             </FormInputContainer>
             <FormInputContainer>
               <FormLabel htmlFor="">email address</FormLabel>
               <FormInput
                 type="text"
-                name="name"
-                id="name"
+                name="email"
+                id="email"
                 placeholder="john.doe@example.com"
+                value={formData.email}
+                onChange={handleChange}
               />
             </FormInputContainer>
             <FormInputContainer>
               <FormLabel htmlFor="">message</FormLabel>
               <FormTextArea
-                name="name"
-                id="name"
+                name="message"
+                id="message"
                 placeholder="Hello Alex! I am looking for a frontend developer to help build out a new SaaS product..."
                 rows={5}
+                value={formData.message}
+                onChange={handleChange}
               />
             </FormInputContainer>
-            <SendMessageBtn>
-              Send Message <Send color="#0a1929" size={16} />
+            <SendMessageBtn type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+              {!loading && <Send color="#0a1929" size={16} />}
             </SendMessageBtn>
           </form>
         </FormContainer>
@@ -307,7 +362,7 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   border: 1px solid #23355499;
   border-radius: 4px;
-  background-color: #0b1b31;
+  background-color: transparent;
   padding: 12px 16px;
   outline: none;
   font-family: var(--font-bricolage-grotesque);
