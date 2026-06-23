@@ -18,7 +18,7 @@ const bricolageGrotesque = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Portfolio using Nextjs",
+  description: "Portfolio of Deepanshu Mahawar using Nextjs",
 };
 
 export default function RootLayout({

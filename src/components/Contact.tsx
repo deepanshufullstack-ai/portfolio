@@ -50,15 +50,18 @@ export default function Contact() {
     });
 
     const data = await response.json();
-
-    alert(data.message);
     setLoading(false);
     if (data.success) {
+      alert(
+        "✅ Thank you for contacting me! Your message has been sent successfully.",
+      );
       setFormData({
         name: "",
         email: "",
         message: "",
       });
+    } else {
+      alert("❌ Failed to send message. Please try again.");
     }
   }
 
@@ -77,7 +80,7 @@ export default function Contact() {
     <ContactSection id="contact" ref={ref}>
       <ContactContent>
         <ContactInfo>
-          <span className="intro">04. whats next</span>
+          <span className="intro">05. whats next</span>
           <h1 className="heading">Lets build something together.</h1>
           <p className="description">
             Whether you have a specific project in mind, an exciting
@@ -85,13 +88,13 @@ export default function Contact() {
             try my best to get back to you!
           </p>
 
-          <ConnectBtn href="">
+          <ConnectBtn href="mailto:deepanshu.fullstack@gmail.com">
             <div className="icon-container">
               <Mail color="#64ffda" size={18} className="icon" />
             </div>
             <div className="link-container">
               <span>email me</span>
-              <h1>hello@alexmercer.com</h1>
+              <h1>deepanshu.fullstack@gmail.com</h1>
             </div>
           </ConnectBtn>
           <ConnectBtn href="">
@@ -100,18 +103,27 @@ export default function Contact() {
             </div>
             <div className="link-container">
               <span>location</span>
-              <h1>San Francisco, CA</h1>
+              <h1>Ratlam. Madhya Pradesh</h1>
             </div>
           </ConnectBtn>
 
           <SubConnectBtnContainer>
-            <SubConnectBtn>
+            <SubConnectBtn
+              href="https://github.com/deepanshufullstack-ai"
+              target="_blank"
+            >
               <LuGithub className="icon" />
             </SubConnectBtn>
-            <SubConnectBtn>
+            <SubConnectBtn
+              href="https://www.linkedin.com/in/deepanshu-mahawar-093abb2b7/"
+              target="_blank"
+            >
               <LuLinkedin className="icon" />
             </SubConnectBtn>
-            <SubConnectBtn>
+            <SubConnectBtn
+              href="https://deepanshu-fullstack.vercel.app/"
+              target="_blank"
+            >
               <LuTwitter className="icon" />
             </SubConnectBtn>
           </SubConnectBtnContainer>
@@ -256,7 +268,7 @@ export const ConnectBtn = styled.a`
   .link-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 
     span {
       color: #8892b0;
@@ -389,12 +401,12 @@ export const FormInput = styled.input`
 export const FormTextArea = styled.textarea`
   border: 1px solid #23355499;
   border-radius: 4px;
-  background-color: #0b1b31;
+  background-color: transparent;
   padding: 12px 16px;
   resize: none;
   outline: none;
   font-family: var(--font-bricolage-grotesque);
-  color: #e5e7eb;
+  color: #ccd6f6;
 
   &:focus {
     border: 1px solid #64ffda;
