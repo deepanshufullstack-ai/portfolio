@@ -118,7 +118,7 @@ export default function Services() {
     <OfferSection id="services" ref={ref}>
       <OfferContent>
         <OfferHeadingContainer>
-          <OfferIntro>03.</OfferIntro>
+          <OfferIntro>02.</OfferIntro>
           <OfferHeading>What I Offer</OfferHeading>
           <OfferLine />
         </OfferHeadingContainer>

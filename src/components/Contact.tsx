@@ -77,7 +77,7 @@ export default function Contact() {
     <ContactSection id="contact" ref={ref}>
       <ContactContent>
         <ContactInfo>
-          <span className="intro">04. whats next</span>
+          <span className="intro">06. whats next</span>
           <h1 className="heading">Lets build something together.</h1>
           <p className="description">
             Whether you have a specific project in mind, an exciting

@@ -1,4 +1,4 @@
-
+"use client";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiNextjsLine } from "react-icons/ri";
 import { RiJavascriptLine } from "react-icons/ri";
@@ -11,6 +11,7 @@ import { SiPostgresql } from "react-icons/si";
 import styled from "styled-components";
 import { DiJavascript, DiMongodb } from "react-icons/di";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
+import { useEffect, useRef } from "react";
 
 const techs = [
   {
@@ -64,11 +65,28 @@ const techs = [
 ];
 
 export default function Tech() {
+  
+    const ref = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            ref.current?.querySelectorAll(".reveal").forEach((el, i) => {
+              setTimeout(() => el.classList.add("visible"), i * 100);
+            });
+          }
+        },
+        { threshold: 0.1 },
+      );
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, []);
   return (
-    <TechSection>
+    <TechSection id="tech" ref={ref}> 
       <TechContent>
         <TechHeadingContainer>
-          <span>02.</span>
+          <span>03.</span>
           <h1>My Tech Stack</h1>
           <div />
         </TechHeadingContainer>

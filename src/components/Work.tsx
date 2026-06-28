@@ -162,7 +162,7 @@ export default function Work() {
     <WorkSection id="work" ref={ref}>
       <WorkContent>
         <WorkHeadingContainer>
-          <span>01.</span>
+          <span>05.</span>
           <h1>Some Things Ive Built</h1>
           <div />
         </WorkHeadingContainer>
@@ -286,121 +286,282 @@ export const WorkContainer = styled.div`
   width: 100%;
 `;
 
+// export const WorkCard = styled.div<{ $isActive: boolean }>(
+//   ({ $isActive }) =>
+//     `
+//   height: 500px;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: space-between;
+//   gap: 20px;
+//   padding: 10px;
+//   border-radius: 8px;
+//   border: 1px solid #23355499;
+//   background-color: #0d1c37;
+//   overflow: hidden;
+//   cursor: pointer;
+//   flex: ${$isActive ? "5" : "0.2"};
+//   transition:
+//     flex 0.5s ease,
+//     transform 0.35s ease,
+//     border 0.35s ease,
+//     background-color 0.35s ease;
+
+//   &:hover {
+//     transform: translateY(-8px);
+//     border: 1px solid #64ffdb;
+//   }
+
+//   .project-image {
+//     width: 300px;
+//     height: 100%;
+//     object-fit: cover;
+//     object-position: center;
+//     border-radius: 4px;
+//   }
+
+//   .project-content {
+//     height: 100%;
+//     width: 100%;
+//     display: ${$isActive ? "flex" : "none"};
+//     flex-direction: column;
+//     position: relative;
+//     padding: 10px 0px;
+//   }
+
+//   .project-status {
+//     position: absolute;
+//     top: 0px;
+//     right: 0px;
+//     padding: 6px 12px;
+//     border-radius: 4px;
+//     background-color: #153446;
+//     color: #64ffda;
+//     font-size: 14px;
+//     font-weight: 400;
+//     font-family: var(--font-bricolage-grotesque);
+//   }
+
+//   .project-subHeading {
+//     color: #64ffda;
+//     line-height: 1;
+//     font-size: 14px;
+//     font-weight: 200;
+//     font-family: var(--font-bricolage-grotesque);
+//     margin-bottom: 10px;
+//   }
+
+//   .project-heading {
+//     line-height: 1;
+//     font-size: 24px;
+//     font-weight: 500;
+//     font-family: var(--font-bricolage-grotesque);
+//     margin-bottom: 30px;
+//     white-space: nowrap;
+//   }
+
+//   .tech-container {
+//     display: flex;
+//     gap: 10px;
+//     margin-bottom: 10px;
+//   }
+
+//   .tech {
+//     font-size: 12px;
+//     font-weight: 200;
+//     padding: 6px 12px;
+//     border-radius: 4px;
+//     background-color: #153446;
+//     color: #64ffda;
+//   }
+
+//   .project-description {
+//     color: #8892b0;
+//     font-size: 14px;
+//     margin-bottom: 20px;
+//   }
+
+//   .highlights-container {
+//     list-style-type: disc;
+//     padding-left: 20px;
+//   }
+
+//   .highlights {
+//     color: #8892b0;
+//     font-size: 14px;
+//     line-height: 1.5;
+//   }
+
+//   .link-container {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//     position: absolute;
+//     bottom: 20px;
+//     left: 0px;
+//   }
+// `,
+// );
+
+
 export const WorkCard = styled.div<{ $isActive: boolean }>(
-  ({ $isActive }) =>
-    `
-  height: 500px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #23355499;
-  background-color: #0d1c37;
-  overflow: hidden;
-  cursor: pointer;
-  flex: ${$isActive ? "5" : "0.2"};
-  transition:
-    flex 0.5s ease,
-    transform 0.35s ease,
-    border 0.35s ease,
-    background-color 0.35s ease;
-
-  &:hover {
-    transform: translateY(-8px);
-    border: 1px solid #64ffdb;
-  }
-
-  .project-image {
-    width: 300px;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 4px;
-  }
-
-  .project-content {
-    height: 100%;
-    width: 100%;
-    display: ${$isActive ? "flex" : "none"};
-    flex-direction: column;
-    position: relative;
-    padding: 10px 0px;
-  }
-
-  .project-status {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    background-color: #153446;
-    color: #64ffda;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: var(--font-bricolage-grotesque);
-  }
-
-  .project-subHeading {
-    color: #64ffda;
-    line-height: 1;
-    font-size: 14px;
-    font-weight: 200;
-    font-family: var(--font-bricolage-grotesque);
-    margin-bottom: 10px;
-  }
-
-  .project-heading {
-    line-height: 1;
-    font-size: 24px;
-    font-weight: 500;
-    font-family: var(--font-bricolage-grotesque);
-    margin-bottom: 30px;
-    white-space: nowrap;
-  }
-
-  .tech-container {
+  ({ $isActive }) => `
+    height: 500px;
     display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #23355499;
+    background-color: #0d1c37;
+    overflow: hidden;
+    cursor: pointer;
 
-  .tech {
-    font-size: 12px;
-    font-weight: 200;
-    padding: 6px 12px;
-    border-radius: 4px;
-    background-color: #153446;
-    color: #64ffda;
-  }
+    flex: ${$isActive ? "5" : "0.2"};
 
-  .project-description {
-    color: #8892b0;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
+    transition:
+      flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s ease,
+      border 0.35s ease,
+      background-color 0.35s ease;
 
-  .highlights-container {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
+    &:hover {
+      transform: translateY(-8px);
+      border: 1px solid #64ffdb;
+    }
 
-  .highlights {
-    color: #8892b0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+    .project-image {
+      width: ${$isActive ? "300px" : "100%"};
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
 
-  .link-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 20px;
-    left: 0px;
-  }
-`,
+      transition:
+        width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s ease;
+    }
+
+    .project-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 10px 0;
+      overflow: hidden;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateX(0)" : "translateX(30px)"};
+      visibility: ${$isActive ? "visible" : "hidden"};
+
+      transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s ease;
+    }
+
+    .project-status {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: #153446;
+      color: #64ffda;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: var(--font-bricolage-grotesque);
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(-10px)"};
+      transition: all 0.4s ease 0.1s;
+    }
+
+    .project-subHeading {
+      color: #64ffda;
+      line-height: 1;
+      font-size: 14px;
+      font-weight: 200;
+      font-family: var(--font-bricolage-grotesque);
+      margin-bottom: 10px;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.1s;
+    }
+
+    .project-heading {
+      line-height: 1;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: var(--font-bricolage-grotesque);
+      margin-bottom: 30px;
+      white-space: nowrap;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.15s;
+    }
+
+    .tech-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.2s;
+    }
+
+    .tech {
+      font-size: 12px;
+      font-weight: 200;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: #153446;
+      color: #64ffda;
+    }
+
+    .project-description {
+      color: #8892b0;
+      font-size: 14px;
+      margin-bottom: 20px;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.25s;
+    }
+
+    .highlights-container {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.3s;
+    }
+
+    .highlights {
+      color: #8892b0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .link-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+
+      opacity: ${$isActive ? "1" : "0"};
+      transform: ${$isActive ? "translateY(0)" : "translateY(15px)"};
+      transition: all 0.5s ease 0.35s;
+    }
+  `,
 );
 
 export const Link = styled.a`

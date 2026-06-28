@@ -71,9 +71,10 @@ export const HeroHeading = styled.h1`
   letter-spacing: -4px;
   margin-left: -4px;
 
-
   @media (max-width: 768px) {
     font-size: 48px;
+    letter-spacing: 0;
+    margin-left: -2px;
   }
 `;
 
@@ -93,6 +94,7 @@ export const HeroSubHeading = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 36px;
+    letter-spacing: 0;
   }
 `;
 

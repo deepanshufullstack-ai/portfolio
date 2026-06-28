@@ -49,7 +49,7 @@ export default function Experience() {
     <ExperienceSection id="experience" ref={ref}>
       <ExperienceContent>
         <ExperienceHeadingContainer>
-          <span>02.</span>
+          <span>04.</span>
           <h1>Where Ive Worked</h1>
           <div />
         </ExperienceHeadingContainer>
