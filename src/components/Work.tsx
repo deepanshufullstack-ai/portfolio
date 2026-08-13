@@ -15,7 +15,7 @@ const projects = [
       "A full-stack project management application with task tracking, team collaboration, role-based access, and analytics dashboard.",
     githubLink: "https://github.com/yourusername/taskflow",
     liveLink: "https://taskflow.vercel.app",
-    image: "/projects/taskflow.png",
+    image: "../hp.png",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     category: "Web Application",
     status: "Completed",
@@ -37,7 +37,7 @@ const projects = [
       "An AI-powered resume builder that creates professional resumes tailored to specific job descriptions.",
     githubLink: "https://github.com/yourusername/ai-resume-builder",
     liveLink: "https://ai-resume-builder.vercel.app",
-    image: "/projects/resume-builder.png",
+    image: "../kr.png",
     technologies: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
     category: "AI Application",
     status: "Completed",
@@ -59,7 +59,7 @@ const projects = [
       "A scalable e-commerce platform featuring product search, cart management, secure payments, and order tracking.",
     githubLink: "https://github.com/yourusername/shopsphere",
     liveLink: "https://shopsphere.vercel.app",
-    image: "/projects/shopsphere.png",
+    image: "../hp.png",
     technologies: ["Next.js", "Redux", "Stripe", "MongoDB"],
     category: "E-Commerce",
     status: "Completed",
@@ -81,7 +81,7 @@ const projects = [
       "A social platform where developers can share posts, connect with peers, and showcase their projects.",
     githubLink: "https://github.com/yourusername/devconnect",
     liveLink: "https://devconnect.vercel.app",
-    image: "/projects/devconnect.png",
+    image: "../kr.png",
     technologies: ["React", "Firebase", "Tailwind CSS", "Node.js"],
     category: "Social Platform",
     status: "Completed",
@@ -103,7 +103,7 @@ const projects = [
       "A finance management application that helps users track expenses, manage budgets, and visualize spending habits.",
     githubLink: "https://github.com/yourusername/finance-tracker",
     liveLink: "https://finance-tracker.vercel.app",
-    image: "/projects/finance-tracker.png",
+    image: "../kr.png",
     technologies: ["React", "Chart.js", "Node.js", "PostgreSQL"],
     category: "Finance",
     status: "Completed",
@@ -125,7 +125,7 @@ const projects = [
       "A weather forecasting application providing real-time weather updates, forecasts, and location-based insights.",
     githubLink: "https://github.com/yourusername/weathervision",
     liveLink: "https://weathervision.vercel.app",
-    image: "/projects/weathervision.png",
+    image: "../kr.png",
     technologies: ["React", "OpenWeather API", "Tailwind CSS"],
     category: "Utility App",
     status: "Completed",
@@ -176,7 +176,7 @@ export default function Work() {
                 onClick={() => setIsActiveId(project.id)}
               >
                 {/* project image */}
-                <img src="../project.jpg" className="project-image" />
+                <img src={project.image} className="project-image" />
 
                 {/* project content */}
                 <div className="project-content">
